@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Molly &amp; Zack's Venues</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a limestone ledger. Header band, sticky filter rail, card grid or table; venue pages open in place. */
+:root{
+  --bg:#F3F4F0; --surface:#FFFFFF; --sunk:#E9ECE6; --ink:#1C2724; --muted:#5C6964; --line:#D8DDD6;
+  --accent:#1D5A84; --accent-ink:#FFFFFF; --olive:#5F6F33; --gold:#B5822A;
+  --good:#2E7A4E; --warn:#A86C12; --bad:#B0442E; --good-bg:#E3F1E8; --warn-bg:#F7ECD9; --bad-bg:#F6E1DB;
+  --f-display:"Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --f-body:"Figtree", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-num:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111715; --surface:#19211F; --sunk:#202A27; --ink:#E7ECE8; --muted:#9BA8A3; --line:#2C3633;
+  --accent:#78AEDA; --accent-ink:#0E1A22; --olive:#A6B86C; --gold:#E2B55B;
+  --good:#6BC390; --warn:#E3A94B; --bad:#E57B64; --good-bg:#1D3326; --warn-bg:#382B15; --bad-bg:#3A201A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111715; --surface:#19211F; --sunk:#202A27; --ink:#E7ECE8; --muted:#9BA8A3; --line:#2C3633;
+  --accent:#78AEDA; --accent-ink:#0E1A22; --olive:#A6B86C; --gold:#E2B55B;
+  --good:#6BC390; --warn:#E3A94B; --bad:#E57B64; --good-bg:#1D3326; --warn-bg:#382B15; --bad-bg:#3A201A; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1240px;margin:0 auto}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;margin:0;line-height:1.1}
+a{color:var(--accent)}
+button,select,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.muted{color:var(--muted)}
+
+/* header */
+header.top{padding-block:28px 18px;display:flex;flex-wrap:wrap;gap:16px 32px;align-items:flex-end;justify-content:space-between}
+header.top h1{font-size:clamp(34px,6vw,54px)}
+header.top h1 em{color:var(--accent)}
+.sub{color:var(--muted);max-width:60ch;margin-top:6px}
+.stats{display:flex;gap:22px;flex-wrap:wrap}
+.stat b{display:block;font-family:var(--f-num);font-size:22px;font-weight:500}
+.tabs{display:flex;gap:4px;width:100%;border-bottom:1px solid var(--line)}
+.tab{padding:8px 14px;text-decoration:none;color:var(--muted);font-weight:600;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tab[aria-current="page"]{color:var(--ink);border-color:var(--accent)}
+.about{font-size:16px;max-width:75ch;margin:0}
+.getting{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.getting div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:13.5px}
+.src{font-size:11.5px;margin-left:4px;white-space:nowrap}
+.todo-group{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.todo-group header{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center}
+.todo-group h3{font-size:24px}
+.todo{display:flex;gap:10px;align-items:flex-start;font-size:14px}
+.todo input{margin-top:3px;width:16px;height:16px;accent-color:var(--olive);flex:none}
+.todo.done span{text-decoration:line-through;color:var(--muted)}
+.todo .kind{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-right:6px}
+.todos{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;padding-block:20px 40px}
+.todos > *{min-width:0}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px;cursor:pointer;font-weight:600;font-size:13px}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+/* controls */
+.controls{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.row + .row{margin-top:8px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 11px;font-size:13px;cursor:pointer;user-select:none}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip.toggle[aria-pressed="true"]{background:var(--olive);border-color:var(--olive);color:var(--bg)}
+select,input[type=search],input[type=number],input[type=text],textarea{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 9px;font-size:13px}
+input[type=search]{min-width:0;flex:1 1 180px;max-width:280px}
+.sep{width:1px;height:22px;background:var(--line)}
+.rateRow{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:8px 12px;margin-bottom:8px}
+.ratelabel{font-weight:600;font-size:13.5px;white-space:nowrap}
+.ratelabel b{color:var(--accent);font-size:15px}
+#rate{flex:1 1 200px;min-width:0;max-width:360px;accent-color:var(--accent)}
+#ratehint{font-size:12px;flex:1 1 220px}
+.be{font-size:12.5px;border-radius:7px;padding:5px 8px;background:var(--sunk)}
+.be b{font-family:var(--f-num);font-weight:500}
+.count{margin-left:auto;font-size:13px;color:var(--muted)}
+
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px;padding-block:20px 40px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:transform .15s,border-color .15s;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.ph{aspect-ratio:16/10;background:var(--sunk);position:relative;overflow:hidden;max-width:100%}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.none{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--muted);
+  background:repeating-linear-gradient(135deg,var(--sunk) 0 14px,var(--bg) 14px 28px)}
+.none span{font-family:var(--f-display);font-size:30px;color:var(--ink);display:block}
+.ph .tag{position:absolute;left:10px;top:10px}
+.pill{display:inline-block;border-radius:999px;padding:2px 9px;font-size:11.5px;font-weight:600;background:var(--surface);border:1px solid var(--line)}
+.pill.good{background:var(--good-bg);color:var(--good);border-color:transparent}
+.pill.warn{background:var(--warn-bg);color:var(--warn);border-color:transparent}
+.pill.bad{background:var(--bad-bg);color:var(--bad);border-color:transparent}
+.pill.status{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.cbody{padding:14px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.cbody h3{font-size:25px}
+.where{font-size:13px;color:var(--muted)}
+.money{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;border-top:1px solid var(--line);padding-top:10px}
+.money div b{display:block;font-family:var(--f-num);font-weight:500;font-size:15.5px}
+.meter{height:6px;border-radius:99px;background:var(--sunk);overflow:hidden}
+.meter i{display:block;height:100%;border-radius:99px}
+.facts{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted)}
+.facts b{color:var(--ink);font-weight:600}
+.months{display:flex;gap:4px}
+.months span{font-size:11px;font-weight:600;padding:2px 7px;border-radius:6px;background:var(--sunk);color:var(--muted)}
+.months span.on{background:var(--olive);color:var(--bg)}
+.stars{color:var(--gold);letter-spacing:1px;white-space:nowrap}
+.stars .off{color:var(--line)}
+.cfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px}
+
+/* table */
+.tablewrap{overflow-x:auto;padding-block:20px 40px}
+table{border-collapse:collapse;width:100%;min-width:980px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;font-size:13px;vertical-align:top}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);cursor:pointer;white-space:nowrap}
+td.n,th.n{text-align:right}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:var(--sunk)}
+
+/* detail */
+.detail{padding-block:18px 60px;display:flex;flex-direction:column;gap:26px}
+.back{align-self:flex-start}
+.gallery{display:grid;grid-template-columns:3fr 1fr;gap:8px}
+.gallery .main{aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;background:var(--sunk);position:relative;max-width:100%}
+.gallery .main img{width:100%;height:100%;object-fit:cover}
+.thumbs{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:start;max-height:100%;overflow:auto}
+.thumbs button{padding:0;border:2px solid transparent;border-radius:8px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;background:var(--sunk)}
+.thumbs button[aria-current="true"]{border-color:var(--accent)}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.dhead{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:flex-end}
+.dhead h2{font-size:clamp(36px,6vw,58px)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.kpis div{background:var(--surface);padding:12px 14px}
+.kpis b{display:block;font-family:var(--f-num);font-size:19px;font-weight:500}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.two > *{min-width:0}
+section h3{font-size:26px;margin-bottom:10px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.ctable{width:100%;min-width:0;border:0}
+.ctable td{border-bottom:1px solid var(--line);padding:7px 4px}
+.ctable tr.total td{font-weight:700;border-bottom:0;border-top:2px solid var(--ink)}
+.ctable tr.sub td{color:var(--muted)}
+.tag-c{font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:1px 6px;border-radius:5px;margin-left:6px;white-space:nowrap}
+.tag-c.c{background:var(--good-bg);color:var(--good)}
+.tag-c.e{background:var(--warn-bg);color:var(--warn)}
+.dates{display:flex;flex-direction:column;gap:6px}
+.date{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);font-size:13.5px}
+.date.out{opacity:.55}
+.date .when{font-family:var(--f-num);min-width:0}
+dl.elena{display:grid;grid-template-columns:minmax(110px,auto) 1fr;gap:6px 14px;margin:0;font-size:14px}
+dl.elena dt{color:var(--muted)}
+dl.elena dd{margin:0;font-family:var(--f-display);font-size:18px;line-height:1.3}
+ul.plain{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.rating-list{display:flex;flex-direction:column;gap:10px}
+.rv{border-top:1px solid var(--line);padding-top:10px}
+.rv .who{font-weight:600}
+.rv.couple .who::after{content:"  ·  one of us";color:var(--olive);font-weight:600;font-size:12px}
+.starpick{display:flex;gap:2px}
+.starpick button{background:none;border:0;font-size:28px;line-height:1;color:var(--line);cursor:pointer;padding:0 2px}
+.starpick button.on{color:var(--gold)}
+form.rate{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.note{font-size:13px;background:var(--sunk);border-radius:8px;padding:10px 12px;color:var(--muted)}
+
+/* settings drawer */
+.drawer{position:fixed;inset:0 0 0 auto;width:min(560px,100%);background:var(--surface);border-left:1px solid var(--line);z-index:20;overflow:auto;
+  padding:calc(20px + env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) 20px;box-shadow:-20px 0 40px rgba(0,0,0,.15)}
+.drawer h3{font-size:28px;margin-bottom:6px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-block:14px}
+.fgrid label{display:flex;flex-direction:column;gap:4px;font-size:12.5px;color:var(--muted)}
+.ctab{width:100%;min-width:0;font-size:12.5px}
+.ctab input{width:80px;padding:4px 6px}
+.ctab td,.ctab th{padding:5px 4px}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:19}
+
+@media (max-width:760px){
+  .two{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr}
+  .thumbs{grid-template-columns:repeat(4,1fr)}
+  .count{margin-left:0;width:100%}
+  .controls{position:static}
+}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="label">Wedding venue shortlist · 2027</div>
+      <h1>Molly &amp; Zack's <em>Venues</em></h1>
+      <p class="sub" id="subline">Every option we're considering, with real costs for our numbers. Click a venue for photos, dates, the full cost breakdown and ratings.</p>
+    </div>
+    <div class="stats" id="stats"></div>
+    <nav class="tabs" aria-label="Sections"><a class="tab" id="tab-all" href="#all">Venues</a><a class="tab" id="tab-todo" href="#todo">To-do <span class="num" id="todocount"></span></a></nav>
+  </header>
+</div>
+
+<div class="controls" id="controls">
+  <div class="wrap">
+    <div class="row rateRow">
+      <label for="rate" class="ratelabel">Guests pay us <b class="num" id="rateval"></b> per room, per night</label>
+      <input type="range" id="rate" min="0" max="600" step="25" aria-describedby="ratehint">
+      <span class="muted" id="ratehint">Drag to see which venues come into budget. Only affects venues where we pay for on-site rooms.</span>
+    </div>
+    <div class="row">
+      <input type="search" id="q" placeholder="Search venues or regions" aria-label="Search venues">
+      <select id="sort" aria-label="Sort by">
+        <option value="net">Sort: Net cost</option>
+        <option value="allin">Sort: All-in cost</option>
+        <option value="fee">Sort: Venue fee</option>
+        <option value="beds">Sort: Beds on site</option>
+        <option value="rating">Sort: Average rating</option>
+        <option value="ours">Sort: Our rating</option>
+        <option value="name">Sort: Name</option>
+      </select>
+      <select id="maxnet" aria-label="Net cost limit">
+        <option value="">Any net cost</option>
+        <option value="100000">Net ≤ $100K</option>
+        <option value="125000">Net ≤ $125K</option>
+        <option value="150000">Net ≤ $150K</option>
+      </select>
+      <select id="minbeds" aria-label="Minimum beds">
+        <option value="0">Any beds</option>
+        <option value="1">Has rooms</option>
+        <option value="30">30+ beds</option>
+        <option value="60">60+ beds</option>
+        <option value="100">100+ beds</option>
+      </select>
+      <select id="status" aria-label="Status">
+        <option value="">Any status</option>
+        <option>New</option><option>Shortlist</option><option>Maybe</option><option>Pass</option>
+      </select>
+      <span class="sep"></span>
+      <button class="chip" id="viewbtn" type="button">Table view</button>
+      <button class="btn" id="setbtn" type="button">Cost assumptions</button>
+    </div>
+    <div class="row" id="chiprow"></div>
+  </div>
+</div>
+
+<main class="wrap" id="main"></main>
+<div id="drawerhost"></div>
+
+<script>
+(() => {
+const MONTHS = [["07","Jul"],["08","Aug"],["09","Sep"],["10","Oct"]];
+const COST_KEYS = [["cateringPerGuest","Catering & bar (per guest)"],["rentals","Rentals (tables, chairs, lighting)"],["flowers","Flowers & décor"],["planner","Wedding planner"],["photoVideo","Photo & video"],["music","Music / DJ"],["ceremony","Officiant & legal"],["hairMakeup","Hair & makeup"],["transport","Guest transport"],["welcomeDinner","Welcome dinner"]];
+const WD = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const S = { venues: [], config: null, a: null, ratings: [], ratingsState: "off", filters: { q:"", countries:new Set(), types:new Set(), months:new Set(), thuSun:true, maxnet:"", minbeds:0, status:"", sources:new Set() }, sort:"net", done:new Set(), todoFilter:"open", view:"grid", photoIdx:{} };
+
+const store = { get(k){ try { return JSON.parse(localStorage.getItem(k)); } catch(e){ return null; } }, set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} } };
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const usd = n => n == null ? "—" : "$" + Math.round(n).toLocaleString("en-US");
+const usdK = n => n == null ? "—" : "$" + (n/1000).toFixed(n >= 99500 ? 0 : 1).replace(/\.0$/,"") + "K";
+const eur = n => n == null ? "—" : "€" + Math.round(n).toLocaleString("en-US");
+const parse = s => { const [y,m,d] = s.split("-").map(Number); return new Date(y, m-1, d); };
+const fmtDate = d => d.toLocaleDateString("en-US", { weekday:"short", month:"short", day:"numeric" });
+
+function assumptions(){
+  const def = S.config.defaults, saved = store.get("venue-assumptions") || {};
+  const cc = JSON.parse(JSON.stringify(S.config.countryCosts));
+  if (saved.countryCosts) for (const c in saved.countryCosts) cc[c] = Object.assign(cc[c] || {}, saved.countryCosts[c]);
+  return Object.assign({}, def, saved, { countryCosts: cc });
+}
+
+function windowsInfo(v){
+  return v.windows.map(w => {
+    const s = parse(w.start), e = parse(w.end), days = [];
+    for (let d = new Date(s); d <= e; d.setDate(d.getDate()+1)) days.push(new Date(d));
+    // For a multi-night stay the last day is checkout, so it can't be the wedding day
+    const weddingDays = (v.model === "Multi-night buyout" && days.length > 1) ? days.slice(0, -1) : days;
+    const ok = weddingDays.filter(d => [4,5,6,0].includes(d.getDay()));
+    const blocked = /optioned/i.test(w.status);
+    return Object.assign({}, w, { s, e, days, okDays: ok, eligible: ok.length > 0 && !blocked, blocked });
+  });
+}
+function months(v, thuSunOnly){
+  const set = new Set();
+  windowsInfo(v).forEach(w => { if (w.blocked) return; (thuSunOnly ? w.okDays : w.days).forEach(d => set.add(String(d.getMonth()+1).padStart(2,"0"))); });
+  return set;
+}
+
+function cost(v){
+  const a = S.a, cc = Object.assign({}, a.countryCosts[v.country] || a.countryCosts.Italy);
+  const lines = [];
+  const fee = v.fee.amount;
+  if (fee == null) return { missing:true, lines:[] };
+  const feeGross = v.fee.vat === "excl" ? fee * (1 + a.vat) : fee;
+  const vatNote = { incl:"VAT included", excl:`+ ${Math.round(a.vat*100)}% VAT`, none:"No VAT (per venue)", unknown:"VAT not stated" }[v.fee.vat];
+  lines.push({ label:"Venue fee", note:`${eur(fee)} · ${vatNote}`, eur:feeGross, confirmed:v.fee.confirmed, venue:true });
+  (v.extras || []).forEach(x => lines.push({ label:x.label, eur:x.amount, confirmed:x.confirmed, venue:true }));
+  COST_KEYS.forEach(([k, label]) => {
+    const ov = v.overrides && v.overrides[k];
+    let val = ov ? ov.value : cc[k];
+    let amt = k === "cateringPerGuest" ? val * a.guests : (k === "welcomeDinner" ? val * a.guests / 100 : val);
+    const note = k === "cateringPerGuest" ? `${eur(val)} × ${a.guests} guests` : "";
+    lines.push({ label, note: ov ? (note ? note + " · " : "") + ov.note : (note || `${v.country} default`), eur:amt, confirmed: ov ? ov.confirmed : false });
+  });
+  const sub = lines.reduce((t,l) => t + l.eur, 0);
+  const cont = sub * a.contingency;
+  const totalEur = sub + cont;
+  const allIn = totalEur * a.fx;
+  const offset = v.couplePaysRooms ? a.roomRateUSD * v.rooms * v.nights : 0;
+  const net = allIn - offset;
+  return { lines, sub, cont, totalEur, allIn, offset, net, perGuest: net / a.guests, feeUsd: feeGross * a.fx };
+}
+
+function breakeven(v){
+  const c = cost(v); if (c.missing) return { text:"Need a price first", cls:"" };
+  const gap = c.allIn - S.a.budgetUSD, rn = v.couplePaysRooms ? v.rooms * v.nights : 0;
+  if (gap <= 0) return { text:"In budget even if guests pay nothing", cls:"good", rate:0 };
+  if (!rn) return { text:`No rooms to offset · ${usdK(gap)} over`, cls:"bad", rate:null };
+  const r = Math.ceil(gap / rn / 5) * 5;
+  return { text:`In budget if guests pay <b>${usd(r)}</b>/room/night`, cls: r <= S.a.roomRateUSD ? "good" : "warn", rate:r };
+}
+function items(arr){ return (arr||[]).map(p => typeof p === "string" ? `<li>${esc(p)}</li>` : `<li>${esc(p.t)}${p.src?` <a class="src" href="${esc(p.src)}" target="_blank" rel="noopener">source ↗</a>`:""}</li>`).join(""); }
+const kmTxt = k => k ? String(k).replace(/(\d)(?!.*\d)/, "$1 km") : "";
+function capWarn(v){ return v.maxGuests && v.maxGuests < S.a.guests ? `<div class="be" style="background:var(--bad-bg);color:var(--bad)">Seats only ${v.maxGuests}, fewer than our ${S.a.guests} guests</div>` : ""; }
+const feeK = c => c.missing ? "—" : c.feeUsd === 0 ? "None" : usdK(c.feeUsd);
+function ratingStats(v){
+  const rs = S.ratings.filter(r => r.venue === v.id);
+  const couple = S.config.couple.map(n => n.toLowerCase());
+  const ours = rs.filter(r => couple.includes(String(r.name).trim().toLowerCase()));
+  const others = rs.filter(r => !couple.includes(String(r.name).trim().toLowerCase()));
+  const avg = arr => arr.length ? arr.reduce((t,r) => t + Number(r.stars), 0) / arr.length : null;
+  return { all: rs, avg: avg(rs), ours, oursAvg: avg(ours), others, othersAvg: avg(others) };
+}
+const starStr = (n) => { if (n == null) return '<span class="muted">No ratings</span>'; const r = Math.round(n); return `<span class="stars" aria-label="${n.toFixed(1)} of 5">${"★".repeat(r)}<span class="off">${"★".repeat(5-r)}</span></span>`; };
+
+function budgetPill(net){
+  if (net == null) return '<span class="pill">Need price</span>';
+  const b = S.a.budgetUSD, r = net / b;
+  if (r <= 0.9) return '<span class="pill good">Under budget</span>';
+  if (r <= 1.0) return '<span class="pill warn">At budget</span>';
+  return `<span class="pill bad">${usdK(net - b)} over</span>`;
+}
+function meter(net){
+  if (net == null) return "";
+  const r = net / S.a.budgetUSD, w = Math.min(100, r * 100);
+  const col = r <= 0.9 ? "var(--good)" : r <= 1 ? "var(--warn)" : "var(--bad)";
+  return `<div class="meter" title="${Math.round(r*100)}% of budget"><i style="width:${w}%;background:${col}"></i></div>`;
+}
+function monthChips(v){
+  if (!v.windows.length) return '<div class="months"><span>Dates TBC</span></div>';
+  const m = months(v, S.filters.thuSun);
+  return `<div class="months">${MONTHS.map(([k,l]) => `<span class="${m.has(k)?"on":""}">${l}</span>`).join("")}</div>`;
+}
+
+// ---------- list ----------
+function filtered(){
+  const f = S.filters;
+  return S.venues.filter(v => {
+    if (f.q && !(`${v.name} ${v.region} ${v.area} ${v.country} ${v.type}`.toLowerCase().includes(f.q.toLowerCase()))) return false;
+    if (f.countries.size && !f.countries.has(v.country)) return false;
+    if (f.types.size && !f.types.has(v.type)) return false;
+    if (f.sources.size && !f.sources.has(v.source === "Elena" ? "Elena" : "Other")) return false;
+    if (f.status && v.status !== f.status) return false;
+    if (v.beds < f.minbeds) return false;
+    if (f.months.size){ if (!v.windows.length) return true; const m = months(v, f.thuSun); if (![...f.months].some(x => m.has(x))) return false; }
+    else if (f.thuSun && v.windows.length && months(v, true).size === 0) return false;
+    if (f.maxnet){ const c = cost(v); if (c.missing || c.net > Number(f.maxnet)) return false; }
+    return true;
+  }).sort((x, y) => {
+    const cx = cost(x), cy = cost(y), big = 1e12;
+    switch (S.sort){
+      case "net": return (cx.missing?big:cx.net) - (cy.missing?big:cy.net);
+      case "allin": return (cx.missing?big:cx.allIn) - (cy.missing?big:cy.allIn);
+      case "fee": return (cx.missing?big:cx.feeUsd) - (cy.missing?big:cy.feeUsd);
+      case "beds": return y.beds - x.beds;
+      case "rating": return (ratingStats(y).avg ?? -1) - (ratingStats(x).avg ?? -1);
+      case "ours": return (ratingStats(y).oursAvg ?? -1) - (ratingStats(x).oursAvg ?? -1);
+      default: return x.name.localeCompare(y.name);
+    }
+  });
+}
+
+function renderChips(){
+  const countries = ["Italy","Portugal","Spain","Greece"];
+  const types = [...new Set(S.venues.map(v => v.type))].sort();
+  const f = S.filters;
+  const nE = S.venues.filter(v => v.source === "Elena").length;
+  $("#chiprow").innerHTML =
+    `<button type="button" class="chip" data-k="sources" data-v="Elena" aria-pressed="${f.sources.has("Elena")}">From Elena <span class="muted">${nE}</span></button>` +
+    `<button type="button" class="chip" data-k="sources" data-v="Other" aria-pressed="${f.sources.has("Other")}">Other sources <span class="muted">${S.venues.length - nE}</span></button>` +
+    '<span class="sep"></span>' +
+    countries.map(c => `<button type="button" class="chip" data-k="countries" data-v="${c}" aria-pressed="${f.countries.has(c)}">${c} <span class="muted">${S.venues.filter(v=>v.country===c).length}</span></button>`).join("") +
+    '<span class="sep"></span>' +
+    types.map(t => `<button type="button" class="chip" data-k="types" data-v="${t}" aria-pressed="${f.types.has(t)}">${t}</button>`).join("") +
+    '<span class="sep"></span>' +
+    MONTHS.map(([k,l]) => `<button type="button" class="chip" data-k="months" data-v="${k}" aria-pressed="${f.months.has(k)}">${l}</button>`).join("") +
+    `<button type="button" class="chip toggle" id="thusun" aria-pressed="${f.thuSun}" title="Only count dates where the wedding day can be Thursday to Sunday">Thu–Sun dates only</button>` +
+    `<span class="count" id="count"></span>`;
+}
+
+function renderStats(){
+  const cs = S.venues.map(cost).filter(c => !c.missing);
+  const under = cs.filter(c => c.net <= S.a.budgetUSD).length;
+  const min = Math.min(...cs.map(c => c.net));
+  $("#stats").innerHTML = `
+    <div class="stat"><span class="label">Venues</span><b>${S.venues.length}</b></div>
+    <div class="stat"><span class="label">Net ≤ budget</span><b>${under}</b></div>
+    <div class="stat"><span class="label">Lowest net</span><b>${usdK(min)}</b></div>
+    <div class="stat"><span class="label">Budget</span><b>${usdK(S.a.budgetUSD)}</b></div>`;
+}
+
+function photoBox(v, i = 0){
+  if (v.photos && v.photos.length) return `<img src="${esc(v.photos[i])}" alt="${esc(v.name)}" loading="lazy">`;
+  return `<div class="none"><div><span>${esc(v.region)}</span><small>Photos to come</small></div></div>`;
+}
+
+function renderList(){
+  const list = filtered();
+  $("#count") && ($("#count").textContent = `${list.length} of ${S.venues.length} venues`);
+  $("#viewbtn").textContent = S.view === "grid" ? "Table view" : "Card view";
+  if (!list.length){ $("#main").innerHTML = `<div class="grid"><p class="muted">No venues match these filters. Clear a filter to see more.</p></div>`; return; }
+  if (S.view === "table"){
+    $("#main").innerHTML = `<div class="tablewrap"><table><thead><tr>
+      <th>Venue</th><th>Region</th><th>Type</th><th class="n">Venue fee</th><th class="n">All-in</th><th class="n">Net</th><th class="n">Net / guest</th><th>Budget at room rate</th><th class="n">Beds</th><th class="n">Plan B</th><th>Months</th><th>Rating</th><th>Status</th></tr></thead><tbody>
+      ${list.map(v => { const c = cost(v), r = ratingStats(v); return `<tr data-id="${v.id}">
+        <td><b>${esc(v.name)}</b><br><span class="muted">${esc(v.model)}</span></td><td>${esc(v.region)}, ${esc(v.country)}</td><td>${esc(v.type)}</td>
+        <td class="n num">${feeK(c)}</td><td class="n num">${c.missing?"—":usdK(c.allIn)}</td><td class="n num"><b>${c.missing?"—":usdK(c.net)}</b></td>
+        <td class="n num">${c.missing?"—":usd(c.perGuest)}</td><td>${(b=>b.rate==null?(c.missing?"—":"No rooms"):b.rate===0?"Always":usd(b.rate)+"+")(breakeven(v))}</td><td class="n num">${v.beds||"—"}</td><td class="n num">${v.planB ?? "?"}</td><td>${monthChips(v)}</td>
+        <td>${starStr(r.avg)} ${r.all.length?`<span class="muted">(${r.all.length})</span>`:""}</td><td><span class="pill status">${esc(v.status)}</span></td></tr>`; }).join("")}
+      </tbody></table></div>`;
+    return;
+  }
+  $("#main").innerHTML = `<div class="grid">${list.map(v => {
+    const c = cost(v), r = ratingStats(v);
+    return `<a class="card" href="#${v.id}" data-id="${v.id}">
+      <div class="ph">${photoBox(v)}<span class="tag">${budgetPill(c.missing?null:c.net)}</span></div>
+      <div class="cbody">
+        <div><h3>${esc(v.name)}</h3><div class="where">${esc(v.region)}, ${esc(v.country)} · ${esc(v.type)} · ${esc(v.model)}${v.source!=="Elena"?` · <b>${esc(v.source)}'s pick</b>`:""}</div></div>
+        <div class="money">
+          <div><span class="label">Net</span><b>${c.missing?"—":usdK(c.net)}</b></div>
+          <div><span class="label">All-in</span><b>${c.missing?"—":usdK(c.allIn)}</b></div>
+          <div><span class="label">Venue fee</span><b>${feeK(c)}</b></div>
+        </div>
+        ${meter(c.missing?null:c.net)}
+        <div class="be">${breakeven(v).text}</div>${capWarn(v)}
+        <div class="facts"><span><b>${v.beds||"No"}</b> beds</span><span>Rain plan <b>${v.planB ?? "?"}</b></span>${v.maxGuests?`<span>Max <b>${v.maxGuests}</b></span>`:""}<span>${esc(v.airport.split(" (")[0])} <b>${v.airportKm?esc(kmTxt(v.airportKm)):esc(v.drive.replace(" (est.)",""))}</b></span>${v.nonstop===true?'<span><b>Nonstop</b> from NYC</span>':v.nonstop===false?'<span><b>1 stop</b> from NYC</span>':""}</div>
+        <div class="cfoot">${monthChips(v)}<span>${starStr(r.avg)} ${r.all.length?`<span class="muted">${r.avg.toFixed(1)} (${r.all.length})</span>`:""}</span></div>
+      </div></a>`; }).join("")}</div>`;
+}
+
+// ---------- detail ----------
+function renderDetail(v){
+  const c = cost(v), r = ratingStats(v), wi = windowsInfo(v);
+  const i = S.photoIdx[v.id] || 0;
+  const gallery = v.photos.length ? `<div class="gallery"><div class="main">${photoBox(v, i)}</div>
+      <div class="thumbs">${v.photos.map((p, k) => `<button type="button" data-ph="${k}" aria-current="${k===i}" aria-label="Photo ${k+1}"><img src="${esc(p)}" alt="" loading="lazy"></button>`).join("")}</div></div>`
+    : `<div class="gallery" style="grid-template-columns:1fr"><div class="main" style="aspect-ratio:21/7">${photoBox(v)}</div></div>`;
+  const dateRows = !wi.length ? '<p class="note">No dates yet. Ask the venue for 2027 availability.</p>' : wi.map(w => {
+    const range = w.start === w.end ? fmtDate(w.s) : `${fmtDate(w.s)} – ${fmtDate(w.e)}`;
+    const span = Math.round((w.e - w.s)/864e5);
+    const nights = w.start === w.end ? "1 day" : span > 4 ? "any dates in this range" : `${span} night${span===1?"":"s"}`;
+    const okLabel = w.blocked ? '<span class="pill bad">Optioned</span>' : w.eligible ? '<span class="pill good">Thu–Sun ✓</span>' : '<span class="pill bad">No Thu–Sun wedding day</span>';
+    const st = /option/i.test(w.status) && !w.blocked ? `<span class="pill">${esc(w.status)}</span>` : "";
+    return `<div class="date ${w.eligible?"":"out"}"><span class="when">${range}</span><span class="muted">${nights}</span>${okLabel}${st}${w.note?`<span class="muted">${esc(w.note)}</span>`:""}</div>`;
+  }).join("");
+  const costRows = c.missing ? `<p class="note">No price yet, so there's no all-in or net cost. Ask Elena for the price list.</p>` : `
+    <table class="ctable"><tbody>
+      ${c.lines.map(l => `<tr><td>${esc(l.label)}<span class="tag-c ${l.confirmed?"c":"e"}">${l.confirmed?"Confirmed":"Estimate"}</span><br><span class="muted" style="font-size:12px">${esc(l.note||"")}</span></td><td class="n num">${eur(l.eur)}</td></tr>`).join("")}
+      <tr class="sub"><td>Contingency (${Math.round(S.a.contingency*100)}%)</td><td class="n num">${eur(c.cont)}</td></tr>
+      <tr class="total"><td>All-in (€${Math.round(c.totalEur).toLocaleString("en-US")} at ${S.a.fx})</td><td class="n num">${usd(c.allIn)}</td></tr>
+      <tr class="sub"><td>Less guests paying for on-site rooms<br><span style="font-size:12px">${v.couplePaysRooms ? `${v.rooms} rooms × ${v.nights} night${v.nights===1?"":"s"} × ${usd(S.a.roomRateUSD)}${v.nightsEst?" (nights estimated)":""}` : esc(v.roomsNote || "No on-site rooms paid by you")}</span></td><td class="n num">−${usd(c.offset)}</td></tr>
+      <tr class="total"><td>Net cost to us</td><td class="n num">${usd(c.net)}</td></tr>
+    </tbody></table>`;
+  const ratingsBlock = renderRatings(v, r);
+  $("#main").innerHTML = `<div class="detail">
+    <a class="btn back" href="#all">← All venues</a>
+    ${gallery}
+    <div class="dhead"><div><div class="label">${esc(v.region)}, ${esc(v.country)} · ${esc(v.area)}</div><h2>${esc(v.name)}</h2>
+      <div class="where">${esc(v.type)} · ${esc(v.model)} · From ${esc(v.source)} · <span class="pill status">${esc(v.status)}</span></div></div>
+      <div>${starStr(r.avg)} ${r.avg!=null?`<span class="num">${r.avg.toFixed(1)}</span> <span class="muted">(${r.all.length})</span>`:""}</div></div>
+    <div class="kpis">
+      <div><span class="label">Net cost</span><b>${c.missing?"—":usd(c.net)}</b>${budgetPill(c.missing?null:c.net)}</div>
+      <div><span class="label">All-in cost</span><b>${c.missing?"—":usd(c.allIn)}</b></div>
+      <div><span class="label">Net per guest</span><b>${c.missing?"—":usd(c.perGuest)}</b></div>
+      <div><span class="label">Venue fee</span><b>${c.missing?"—":usd(c.feeUsd)}</b></div>
+      <div><span class="label">Beds on site</span><b>${v.beds||"None"}</b></div>
+      <div><span class="label">Rain plan</span><b>${v.planB != null ? v.planB + " pax" : "Not stated"}</b></div>
+      <div><span class="label">Max guests</span><b>${v.maxGuests||"Not stated"}</b></div>
+      <div><span class="label">Source</span><b style="font-size:15px">${esc(v.source)}</b></div>
+    </div>
+    ${v.about?`<p class="about">${esc(v.about)}</p>`:""}
+    <section><h3>Getting there</h3><div class="getting">
+      <div><span class="label">Closest airport</span><br><b>${esc(v.airport)}</b><br>${esc(v.airportKm?kmTxt(v.airportKm)+" · ":"")}${esc(v.drive)}</div>
+      <div><span class="label">From New York</span><br>${esc(v.flight || "Not checked yet")}</div>
+      ${v.altAirport?`<div><span class="label">Other option</span><br>${esc(v.altAirport)}</div>`:""}
+    </div></section>
+    <p class="note"><b>Price used:</b> ${esc(v.fee.scenario)}<br>${breakeven(v).text}.</p>${capWarn(v)}
+    <div class="two">
+      <section><h3>Dates offered</h3><div class="dates">${dateRows}</div></section>
+      <section><h3>Cost breakdown</h3><div class="panel">${costRows}</div></section>
+    </div>
+    <div class="two">
+      <section><h3>Pros</h3><ul class="plain">${items(v.pros)}</ul></section>
+      <section><h3>Cons</h3><ul class="plain">${items(v.cons)}</ul></section>
+    </div>
+    <div class="two">
+      <section><h3>${v.source === "Elena" ? "From Elena" : "Details on file"}</h3><div class="panel"><dl class="elena">${Object.entries(v.elena).map(([k,val])=>`<dt>${esc(k)}</dt><dd>${esc(val)}</dd>`).join("")}</dl></div></section>
+      <section><h3>Questions to ask</h3><ul class="plain">${items(v.questions)}</ul>${v.reviews?`<h3 style="margin-top:20px">What people say</h3><p style="margin:0">${esc(v.reviews)}</p>`:""}
+        <h3 style="margin-top:20px">Links</h3><div class="links">${Object.entries(v.links).map(([k,u])=>`<a class="btn" href="${esc(u)}" target="_blank" rel="noopener">${esc(k)} ↗</a>`).join("")}</div></section>
+    </div>
+    <section id="ratings"><h3>Ratings</h3>${ratingsBlock}</section>
+  </div>`;
+  window.scrollTo(0, 0);
+}
+
+function renderRatings(v, r){
+  const block = (title, arr, avg) => `<div class="panel"><div class="row" style="justify-content:space-between"><b>${title}</b><span>${starStr(avg)} ${avg!=null?`<span class="num">${avg.toFixed(1)}</span>`:""}</span></div>
+     <div class="rating-list">${arr.length ? arr.map(x => `<div class="rv ${title==="Molly & Zack"?"couple":""}"><div class="row" style="justify-content:space-between"><span class="who">${esc(x.name)}</span>${starStr(Number(x.stars))}</div>${x.comment?`<div>${esc(x.comment)}</div>`:""}</div>`).join("") : '<p class="muted" style="margin:8px 0 0">No ratings yet.</p>'}</div></div>`;
+  let form;
+  if (S.ratingsState === "on"){
+    const me = store.get("venue-rater") || "";
+    const mine = S.ratings.find(x => x.venue === v.id && String(x.name).toLowerCase() === me.toLowerCase());
+    form = `<form class="rate panel" id="rateform"><b>${mine ? "Update your rating" : "Add your rating"}</b>
+      <label class="label" for="rname">Your name</label><input type="text" id="rname" value="${esc(me)}" required maxlength="40" autocomplete="name">
+      <div class="starpick" id="starpick" data-val="${mine?mine.stars:0}">${[1,2,3,4,5].map(n=>`<button type="button" data-s="${n}" aria-label="${n} star${n>1?"s":""}" class="${mine&&mine.stars>=n?"on":""}">★</button>`).join("")}</div>
+      <label class="label" for="rcomment">Comment (optional)</label><textarea id="rcomment" rows="3" maxlength="500">${esc(mine?mine.comment:"")}</textarea>
+      <div class="row"><button class="btn primary" type="submit">Save rating</button><span class="muted" id="rmsg"></span></div>
+      <span class="muted" style="font-size:12px">Rating again with the same name replaces your earlier rating.</span></form>`;
+  } else if (S.ratingsState === "loading") form = `<p class="note">Loading ratings…</p>`;
+  else if (S.ratingsState === "error") form = `<p class="note">Ratings couldn't load right now. Refresh the page to try again.</p>`;
+  else form = `<p class="note">Ratings switch on once the site is live and connected to the Google Sheet.</p>`;
+  return `<div class="two">${block("Molly & Zack", r.ours, r.oursAvg)}${block("Friends & family", r.others, r.othersAvg)}</div>${form}`;
+}
+
+// ---------- to-do ----------
+function todoItems(){
+  const groups = [];
+  const gen = (S.config.todos || []).map((t, k) => ({ id:"gen-" + k, text:t, kind:"Plan" }));
+  groups.push({ title:"Planning", items:gen, venue:null });
+  S.venues.forEach(v => {
+    const its = [];
+    const via = v.source === "Elena" ? "Ask Elena" : "Ask venue";
+    if (v.fee.amount == null) its.push({ id:v.id + "-price", text:"Get the price list", kind:"Missing" });
+    else if (!v.fee.confirmed) its.push({ id:v.id + "-price-confirm", text:"Confirm the price (the figure on the site is an estimate)", kind:"Missing" });
+    if (!v.photos.length) its.push({ id:v.id + "-photos", text:"Find photos", kind:"Missing" });
+    if (!v.windows.length) its.push({ id:v.id + "-dates", text:"Ask for 2027 availability", kind:"Missing" });
+    (v.questions || []).forEach((q, k) => its.push({ id:v.id + "-q" + k + "-" + (typeof q === "string" ? q : q.t).length, text: typeof q === "string" ? q : q.t, kind: via }));
+    groups.push({ title:v.name, items:its, venue:v });
+  });
+  return groups;
+}
+function renderTodo(){
+  const groups = todoItems(), live = S.ratingsState === "on";
+  const open = groups.reduce((t, g) => t + g.items.filter(i => !S.done.has(i.id)).length, 0);
+  $("#main").innerHTML = `<div class="detail" style="gap:12px">
+    <div class="row" style="justify-content:space-between"><h2 style="font-size:40px">To-do</h2>
+      <div class="row"><button class="chip" type="button" data-tf="open" aria-pressed="${S.todoFilter==="open"}">Open (${open})</button><button class="chip" type="button" data-tf="all" aria-pressed="${S.todoFilter==="all"}">All</button></div></div>
+    ${live ? "" : '<p class="note">Ticking items off saves for everyone once the site is connected to the Google Sheet. Until then, the list is read-only.</p>'}
+    <div class="todos" style="padding-block:4px 40px">${groups.map(g => {
+      const its = g.items.filter(i => S.todoFilter === "all" || !S.done.has(i.id));
+      if (!its.length) return "";
+      const v = g.venue, contact = v && (v.links.Contact || v.links.Website || v.links["More info"]);
+      return `<div class="todo-group"><header><div><h3>${esc(g.title)}</h3>${v?`<span class="muted" style="font-size:13px">${esc(v.region)} · ${esc(v.source)}</span>`:""}</div>
+        <div class="row">${v?`<a class="btn" href="#${v.id}">Details</a>`:""}${contact?`<a class="btn primary" href="${esc(contact)}" target="_blank" rel="noopener">Contact ↗</a>`:""}</div></header>
+        ${v && v.contactInfo ? `<div class="muted" style="font-size:12.5px;user-select:all">${esc(v.contactInfo)}</div>` : ""}
+        ${its.map(i => `<label class="todo ${S.done.has(i.id)?"done":""}"><input type="checkbox" data-todo="${esc(i.id)}" ${S.done.has(i.id)?"checked":""} ${live?"":"disabled"}><span><span class="kind">${i.kind}</span>${esc(i.text)}</span></label>`).join("")}
+      </div>`; }).join("")}</div></div>`;
+}
+async function toggleTodo(id, done){
+  if (done) S.done.add(id); else S.done.delete(id);
+  renderTodo(); updateTodoCount();
+  try { await fetch(S.config.ratingsUrl, { method:"POST", headers:{ "Content-Type":"text/plain;charset=utf-8" }, body: JSON.stringify({ kind:"todo", id, done }) }); }
+  catch(e){ if (done) S.done.delete(id); else S.done.add(id); renderTodo(); updateTodoCount(); }
+}
+function updateTodoCount(){ const n = todoItems().reduce((t, g) => t + g.items.filter(i => !S.done.has(i.id)).length, 0); $("#todocount").textContent = n ? `(${n})` : ""; }
+
+// ---------- settings ----------
+function openSettings(){
+  const a = S.a, countries = Object.keys(a.countryCosts);
+  $("#drawerhost").innerHTML = `<div class="scrim" id="scrim"></div><aside class="drawer" role="dialog" aria-label="Cost assumptions">
+    <h3>Cost assumptions</h3><p class="muted" style="margin:0">Used for every venue's all-in and net cost. Changes are saved in this browser only, so other people still see the defaults.</p>
+    <div class="fgrid">
+      <label>Guests<input type="number" id="s-guests" value="${a.guests}" min="10" max="300"></label>
+      <label>Budget (USD)<input type="number" id="s-budget" value="${a.budgetUSD}" step="1000"></label>
+      <label>Room rate guests pay us (USD / night)<input type="number" id="s-room" value="${a.roomRateUSD}" step="10"></label>
+      <label>EUR → USD<input type="number" id="s-fx" value="${a.fx}" step="0.001"></label>
+      <label>Contingency (%)<input type="number" id="s-cont" value="${Math.round(a.contingency*100)}" min="0" max="40"></label>
+      <label>VAT on venues that exclude it (%)<input type="number" id="s-vat" value="${Math.round(a.vat*100)}" min="0" max="30"></label>
+    </div>
+    <div class="label">Typical costs by country (EUR, for ${a.guests} guests)</div>
+    <div style="overflow-x:auto"><table class="ctab"><thead><tr><th></th>${countries.map(c=>`<th>${c}</th>`).join("")}</tr></thead><tbody>
+      ${COST_KEYS.map(([k,l]) => `<tr><td>${l}</td>${countries.map(c=>`<td><input type="number" data-c="${c}" data-k="${k}" value="${a.countryCosts[c][k]}" aria-label="${l}, ${c}"></td>`).join("")}</tr>`).join("")}
+    </tbody></table></div>
+    <p class="muted" style="font-size:12px">Welcome dinner is scaled by guest count. Sources: ${S.config.costSources.map(([c,u])=>`<a href="${esc(u)}" target="_blank" rel="noopener">${c}</a>`).join(", ")}. Venue-specific figures (like Commenda's in-house menu) override these.</p>
+    <div class="row"><button class="btn primary" id="s-save" type="button">Apply</button><button class="btn" id="s-reset" type="button">Reset to defaults</button><button class="btn" id="s-close" type="button">Close</button></div>
+  </aside>`;
+  const close = () => { $("#drawerhost").innerHTML = ""; };
+  $("#scrim").onclick = close; $("#s-close").onclick = close;
+  $("#s-reset").onclick = () => { store.set("venue-assumptions", null); S.a = assumptions(); close(); refresh(); };
+  $("#s-save").onclick = () => {
+    const cc = {}; document.querySelectorAll(".ctab input").forEach(inp => { (cc[inp.dataset.c] ||= {})[inp.dataset.k] = Number(inp.value) || 0; });
+    const saved = { guests:Number($("#s-guests").value)||100, budgetUSD:Number($("#s-budget").value)||100000, roomRateUSD:Number($("#s-room").value)||0,
+      fx:Number($("#s-fx").value)||1, contingency:(Number($("#s-cont").value)||0)/100, vat:(Number($("#s-vat").value)||0)/100, countryCosts:cc };
+    store.set("venue-assumptions", saved); S.a = assumptions(); close(); refresh();
+  };
+}
+
+// ---------- ratings backend ----------
+async function loadRatings(){
+  const url = S.config.ratingsUrl;
+  if (!url){ S.ratingsState = "off"; return; }
+  S.ratingsState = "loading";
+  try { const res = await fetch(url); const j = await res.json(); S.ratings = (j.ratings || []).map(x => ({ venue:x.venue, name:x.name, stars:Number(x.stars), comment:x.comment || "" })); S.done = new Set(j.done || []); S.ratingsState = "on"; }
+  catch(e){ S.ratingsState = "error"; }
+}
+async function submitRating(v){
+  const name = $("#rname").value.trim(), stars = Number($("#starpick").dataset.val), comment = $("#rcomment").value.trim();
+  if (!name){ $("#rmsg").textContent = "Add your name first."; return; }
+  if (!stars){ $("#rmsg").textContent = "Pick 1 to 5 stars."; return; }
+  $("#rmsg").textContent = "Saving…";
+  try {
+    await fetch(S.config.ratingsUrl, { method:"POST", headers:{ "Content-Type":"text/plain;charset=utf-8" }, body: JSON.stringify({ venue:v.id, name, stars, comment }) });
+    store.set("venue-rater", name);
+    const i = S.ratings.findIndex(x => x.venue === v.id && x.name.toLowerCase() === name.toLowerCase());
+    const row = { venue:v.id, name, stars, comment };
+    if (i >= 0) S.ratings[i] = row; else S.ratings.push(row);
+    route(); setTimeout(() => { const m = $("#rmsg"); if (m) m.textContent = "Saved."; }, 0);
+  } catch(e){ $("#rmsg").textContent = "Couldn't save. Check your connection and try again."; }
+}
+
+// ---------- routing & events ----------
+function current(){ const h = location.hash.slice(1); return S.venues.find(v => v.id === h); }
+function route(){
+  const h = location.hash.slice(1), v = current(), todo = h === "todo";
+  $("#controls").hidden = !!v || todo;
+  $("#tab-all").setAttribute("aria-current", todo ? "false" : "page"); $("#tab-todo").setAttribute("aria-current", todo ? "page" : "false");
+  updateTodoCount();
+  if (todo) renderTodo(); else if (v) renderDetail(v); else renderList();
+}
+function refresh(){ syncRate(); renderStats(); renderChips(); route(); }
+
+document.addEventListener("click", e => {
+  const chip = e.target.closest("[data-k]");
+  if (chip && chip.closest("#chiprow")){ const set = S.filters[chip.dataset.k]; set.has(chip.dataset.v) ? set.delete(chip.dataset.v) : set.add(chip.dataset.v); renderChips(); renderList(); return; }
+  if (e.target.closest("#thusun")){ S.filters.thuSun = !S.filters.thuSun; renderChips(); renderList(); return; }
+  const tr = e.target.closest("tr[data-id]"); if (tr){ location.hash = tr.dataset.id; return; }
+  const ph = e.target.closest("[data-ph]"); if (ph){ const v = current(); S.photoIdx[v.id] = Number(ph.dataset.ph); renderDetail(v); return; }
+  const sb = e.target.closest("#starpick button"); if (sb){ const n = Number(sb.dataset.s), p = $("#starpick"); p.dataset.val = n; p.querySelectorAll("button").forEach(b => b.classList.toggle("on", Number(b.dataset.s) <= n)); return; }
+  if (e.target.closest("#viewbtn")){ S.view = S.view === "grid" ? "table" : "grid"; store.set("venue-view", S.view); renderList(); return; }
+  if (e.target.closest("#setbtn")){ openSettings(); return; }
+  const tf = e.target.closest("[data-tf]"); if (tf){ S.todoFilter = tf.dataset.tf; renderTodo(); return; }
+  const back = e.target.closest('a[href="#all"]'); if (back){ e.preventDefault(); history.pushState(null, "", location.pathname + location.search); route(); }
+});
+document.addEventListener("change", e => { const t = e.target.closest("[data-todo]"); if (t) toggleTodo(t.dataset.todo, t.checked); });
+document.addEventListener("submit", e => { if (e.target.id === "rateform"){ e.preventDefault(); const v = current(); if (v) submitRating(v); } });
+function syncRate(){ $("#rate").value = S.a.roomRateUSD; $("#rateval").textContent = usd(S.a.roomRateUSD); }
+$("#rate").addEventListener("input", e => {
+  S.a.roomRateUSD = Number(e.target.value); syncRate();
+  const saved = store.get("venue-assumptions") || {}; saved.roomRateUSD = S.a.roomRateUSD; store.set("venue-assumptions", saved);
+  renderStats(); renderList();
+});
+$("#q").addEventListener("input", e => { S.filters.q = e.target.value; renderList(); });
+$("#sort").addEventListener("change", e => { S.sort = e.target.value; renderList(); });
+$("#maxnet").addEventListener("change", e => { S.filters.maxnet = e.target.value; renderList(); });
+$("#minbeds").addEventListener("change", e => { S.filters.minbeds = Number(e.target.value); renderList(); });
+$("#status").addEventListener("change", e => { S.filters.status = e.target.value; renderList(); });
+window.addEventListener("hashchange", route);
+window.addEventListener("popstate", route);
+
+async function boot(){
+  try {
+    const [venues, config] = await Promise.all([fetch("data/venues.json").then(r => r.json()), fetch("data/config.json").then(r => r.json())]);
+    S.venues = venues; S.config = config; S.a = assumptions(); S.view = store.get("venue-view") || "grid";
+  } catch(e){ $("#main").innerHTML = `<p class="note">The venue list couldn't load. Refresh the page to try again.</p>`; return; }
+  refresh();
+  await loadRatings(); route();
+}
+boot();
+})();
+</script>
+
+</body>
+</html>

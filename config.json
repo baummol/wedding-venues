@@ -1,0 +1,95 @@
+{
+ "couple": [
+  "Zack",
+  "Molly"
+ ],
+ "ratingsUrl": "",
+ "defaults": {
+  "guests": 100,
+  "roomRateUSD": 250,
+  "fx": 1.1216,
+  "budgetUSD": 100000,
+  "contingency": 0.1,
+  "vat": 0.22
+ },
+ "todos": [
+  "Connect the Google Sheet so ratings and this to-do list save for everyone",
+  "Send Elena our shortlist and feedback",
+  "Send the non-Italy venues (Portugal, Spain, Greece) to add to the site",
+  "Research our own venues in Portugal, Spain and Greece",
+  "Find planners for Portugal, Spain and Greece (Elena covers Italy)",
+  "Collect photos for venues marked 'Find photos'"
+ ],
+ "countryCosts": {
+  "Italy": {
+   "cateringPerGuest": 180,
+   "rentals": 4000,
+   "flowers": 8000,
+   "planner": 10000,
+   "photoVideo": 7000,
+   "music": 5000,
+   "ceremony": 1500,
+   "hairMakeup": 1000,
+   "transport": 3000,
+   "welcomeDinner": 6000
+  },
+  "Spain": {
+   "cateringPerGuest": 180,
+   "rentals": 3500,
+   "flowers": 6000,
+   "planner": 8000,
+   "photoVideo": 6000,
+   "music": 5000,
+   "ceremony": 1000,
+   "hairMakeup": 1000,
+   "transport": 3000,
+   "welcomeDinner": 5000
+  },
+  "Portugal": {
+   "cateringPerGuest": 140,
+   "rentals": 3000,
+   "flowers": 5000,
+   "planner": 5000,
+   "photoVideo": 5000,
+   "music": 3500,
+   "ceremony": 1000,
+   "hairMakeup": 800,
+   "transport": 2500,
+   "welcomeDinner": 4500
+  },
+  "Greece": {
+   "cateringPerGuest": 130,
+   "rentals": 3000,
+   "flowers": 5000,
+   "planner": 6000,
+   "photoVideo": 5500,
+   "music": 3500,
+   "ceremony": 1000,
+   "hairMakeup": 800,
+   "transport": 2500,
+   "welcomeDinner": 4500
+  }
+ },
+ "costSources": [
+  [
+   "Italy",
+   "https://princessapulia.com/blog/cost-of-weddings-in-italy-the-average-cost-of-a-wedding-for-100-guests/"
+  ],
+  [
+   "Italy",
+   "https://elleffevents.com/blog/destination-wedding-italy-cost-2026/"
+  ],
+  [
+   "Spain",
+   "https://boucleweddings.com/en/wedding-cost-in-spain/"
+  ],
+  [
+   "Portugal",
+   "https://www.pedropulidophotography.com/wedding-cost-portugal-2026/"
+  ],
+  [
+   "Greece",
+   "https://bigfatgreekday.com/crete-vs-santorini-wedding/"
+  ]
+ ]
+}
