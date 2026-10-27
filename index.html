@@ -60,6 +60,12 @@ header.top h1 em{color:var(--accent)}
 .todo input{margin-top:3px;width:16px;height:16px;accent-color:var(--olive);flex:none}
 .todo.done span{text-decoration:line-through;color:var(--muted)}
 .todo .kind{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-right:6px}
+.wx{width:100%;min-width:0;border:0;font-size:13.5px}
+.wx th,.wx td{padding:6px 8px;text-align:center;border-bottom:1px solid var(--line)}
+.wx th:first-child,.wx td:first-child{text-align:left}
+.wx .hot{color:var(--bad);font-weight:700}.wx .warm{color:var(--warn);font-weight:600}.wx .ok{color:var(--good);font-weight:600}
+.pl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px}
+.pl-grid > *{min-width:0}
 .todos{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;padding-block:20px 40px}
 .todos > *{min-width:0}
 .btn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px;cursor:pointer;font-weight:600;font-size:13px}
@@ -189,11 +195,47 @@ form.rate{display:flex;flex-direction:column;gap:8px;margin-top:12px}
   .count{margin-left:0;width:100%}
   .controls{position:static}
 }
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;background:transparent;padding:6px 13px;font:inherit;font-size:13px;cursor:pointer;color:var(--ink)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.badges{display:flex;flex-wrap:wrap;gap:6px}
+.bdg{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:2px 9px;font-size:11.5px;font-weight:600;background:var(--sunk);color:var(--ink)}
+.bdg.good{background:var(--good-bg);color:var(--good)}.bdg.warn{background:var(--warn-bg);color:var(--warn)}.bdg.bad{background:var(--bad-bg);color:var(--bad)}
+.bdg.priv{background:var(--ink);color:var(--bg)}
+.appeal{font-family:var(--f-num);font-size:12px;color:var(--muted)}.appeal b{color:var(--gold);letter-spacing:1px}
+#mapview{height:min(72vh,720px);border-radius:var(--r);border:1px solid var(--line);margin-block:20px 40px;background:var(--sunk)}
+.vmap{height:340px;border-radius:var(--r);border:1px solid var(--line);background:var(--sunk)}
+.pin{transform:translate(-50%,-50%);display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font:600 11px/1 var(--f-body);color:#fff;white-space:nowrap;padding:5px 8px;box-shadow:0 1px 4px rgba(0,0,0,.35);border:2px solid #fff}
+.pin.good{background:#2E7A4E}.pin.warn{background:#A86C12}.pin.bad{background:#B0442E}.pin.none{background:#5C6964}
+.pin.dot{width:16px;height:16px;padding:0}
+.pin.air{background:#1D5A84}.pin.stay{background:#5F6F33}.pin.venue{background:#1C2724;font-size:12px;padding:6px 10px}
+.mini{width:240px;font-family:var(--f-body)}.mini img{width:100%;height:120px;object-fit:cover;border-radius:6px;display:block}
+.mini h4{font-family:var(--f-display);font-weight:400;font-size:20px;margin:8px 0 2px}.mini .m{font-size:12px;color:#5C6964}
+.mini .row{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.mini a.open{background:#1D5A84;color:#fff;border-radius:999px;padding:5px 12px;text-decoration:none;font-size:12.5px;font-weight:600}
+.leaflet-popup-content{margin:10px}
+.stay-list{display:grid;gap:10px}.stay-list .panel{padding:12px 14px}
+.thing-list{margin:8px 0 0;padding-left:18px}
+.cmts{display:grid;gap:10px}.cmt{border:1px solid var(--line);border-radius:var(--r);padding:10px 12px;background:var(--surface)}
+.cmt.couple{border-color:var(--accent);background:color-mix(in srgb, var(--accent) 7%, var(--surface))}
+.cmt .who{font-weight:600}.cmt .when{font-size:12px;color:var(--muted)}
+#chiprow select{max-width:220px}
+.ms{position:relative}
+.ms-btn{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:7px 30px 7px 11px;cursor:pointer;min-width:120px;text-align:left;position:relative;max-width:260px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ms-btn::after{content:"▾";position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.ms.on .ms-btn{border-color:var(--ink);font-weight:600}
+.ms-panel{position:absolute;z-index:30;top:calc(100% + 4px);left:0;min-width:240px;background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.14);padding:6px;display:grid;gap:2px}
+.ms-panel[hidden]{display:none}
+.ms-panel label{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:6px;cursor:pointer;font-size:13.5px}
+.ms-panel label:hover{background:var(--sunk)}
+.ms-panel .muted{margin-left:auto}
+.ms-clear{border:0;background:none;color:var(--accent);font:inherit;font-size:12.5px;text-align:left;padding:6px 8px;cursor:pointer}
 @media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
 </style>
 
 </head>
 <body>
+
 <div class="wrap">
   <header class="top">
     <div>
@@ -202,7 +244,7 @@ form.rate{display:flex;flex-direction:column;gap:8px;margin-top:12px}
       <p class="sub" id="subline">Every option we're considering, with real costs for our numbers. Click a venue for photos, dates, the full cost breakdown and ratings.</p>
     </div>
     <div class="stats" id="stats"></div>
-    <nav class="tabs" aria-label="Sections"><a class="tab" id="tab-all" href="#all">Venues</a><a class="tab" id="tab-todo" href="#todo">To-do <span class="num" id="todocount"></span></a></nav>
+    <nav class="tabs" aria-label="Sections"><a class="tab" id="tab-all" href="#all">Venues</a><a class="tab" id="tab-todo" href="#todo">To-do <span class="num" id="todocount"></span></a><a class="tab" id="tab-planners" href="#planners">Planners</a></nav>
   </header>
 </div>
 
@@ -222,6 +264,7 @@ form.rate{display:flex;flex-direction:column;gap:8px;margin-top:12px}
         <option value="beds">Sort: Beds on site</option>
         <option value="rating">Sort: Average rating</option>
         <option value="ours">Sort: Our rating</option>
+        <option value="appeal">Sort: Destination appeal</option>
         <option value="name">Sort: Name</option>
       </select>
       <select id="maxnet" aria-label="Net cost limit">
@@ -237,12 +280,14 @@ form.rate{display:flex;flex-direction:column;gap:8px;margin-top:12px}
         <option value="60">60+ beds</option>
         <option value="100">100+ beds</option>
       </select>
-      <select id="status" aria-label="Status">
-        <option value="">Any status</option>
-        <option>New</option><option>Shortlist</option><option>Maybe</option><option>Pass</option>
+      <select id="minrating" aria-label="Rating">
+        <option value="">Any rating</option>
+        <option value="4">4★ and up</option>
+        <option value="3">3★ and up</option>
+        <option value="none">Not rated yet</option>
       </select>
       <span class="sep"></span>
-      <button class="chip" id="viewbtn" type="button">Table view</button>
+      <div class="seg" id="viewseg" role="group" aria-label="View"><button type="button" data-view="grid">Cards</button><button type="button" data-view="table">Table</button><button type="button" data-view="map">Map</button></div>
       <button class="btn" id="setbtn" type="button">Cost assumptions</button>
     </div>
     <div class="row" id="chiprow"></div>
@@ -257,7 +302,7 @@ form.rate{display:flex;flex-direction:column;gap:8px;margin-top:12px}
 const MONTHS = [["07","Jul"],["08","Aug"],["09","Sep"],["10","Oct"]];
 const COST_KEYS = [["cateringPerGuest","Catering & bar (per guest)"],["rentals","Rentals (tables, chairs, lighting)"],["flowers","Flowers & décor"],["planner","Wedding planner"],["photoVideo","Photo & video"],["music","Music / DJ"],["ceremony","Officiant & legal"],["hairMakeup","Hair & makeup"],["transport","Guest transport"],["welcomeDinner","Welcome dinner"]];
 const WD = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-const S = { venues: [], config: null, a: null, ratings: [], ratingsState: "off", filters: { q:"", countries:new Set(), types:new Set(), months:new Set(), thuSun:true, maxnet:"", minbeds:0, status:"", sources:new Set() }, sort:"net", done:new Set(), todoFilter:"open", view:"grid", photoIdx:{} };
+const S = { venues: [], config: null, weather: {}, planners: [], a: null, ratings: [], ratingsState: "off", filters: { q:"", country:new Set(), privacy:new Set(), month:new Set(), source:new Set(), setting:new Set(), days:new Set(), maxnet:"", minbeds:0, minrating:"" }, comments: [], commentsOn:false, sort:"net", done:new Set(), todoFilter:"open", view:"grid", photoIdx:{} };
 
 const store = { get(k){ try { return JSON.parse(localStorage.getItem(k)); } catch(e){ return null; } }, set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} } };
 const $ = s => document.querySelector(s);
@@ -281,14 +326,14 @@ function windowsInfo(v){
     for (let d = new Date(s); d <= e; d.setDate(d.getDate()+1)) days.push(new Date(d));
     // For a multi-night stay the last day is checkout, so it can't be the wedding day
     const weddingDays = (v.model === "Multi-night buyout" && days.length > 1) ? days.slice(0, -1) : days;
-    const ok = weddingDays.filter(d => [4,5,6,0].includes(d.getDay()));
+    const sel = S.filters.days, ok = weddingDays.filter(d => !sel.size || sel.has(String(d.getDay())));
     const blocked = /optioned/i.test(w.status);
     return Object.assign({}, w, { s, e, days, okDays: ok, eligible: ok.length > 0 && !blocked, blocked });
   });
 }
-function months(v, thuSunOnly){
+function months(v, dayFilter){
   const set = new Set();
-  windowsInfo(v).forEach(w => { if (w.blocked) return; (thuSunOnly ? w.okDays : w.days).forEach(d => set.add(String(d.getMonth()+1).padStart(2,"0"))); });
+  windowsInfo(v).forEach(w => { if (w.blocked) return; (dayFilter ? w.okDays : w.days).forEach(d => set.add(String(d.getMonth()+1).padStart(2,"0"))); });
   return set;
 }
 
@@ -339,6 +384,16 @@ function ratingStats(v){
 }
 const starStr = (n) => { if (n == null) return '<span class="muted">No ratings</span>'; const r = Math.round(n); return `<span class="stars" aria-label="${n.toFixed(1)} of 5">${"★".repeat(r)}<span class="off">${"★".repeat(5-r)}</span></span>`; };
 
+const RAIN = { "Indoor space for 100":["Rain plan: indoor","good"], "Marquee needed":["Rain plan: marquee","warn"], "Unconfirmed":["Rain plan: unconfirmed","bad"] };
+function badges(v, withPrivacy = true){
+  const out = [];
+  if (withPrivacy && v.privacy) out.push(`<span class="bdg priv">${esc(v.privacy)}</span>`);
+  if (v.rainPlan && RAIN[v.rainPlan]) out.push(`<span class="bdg ${RAIN[v.rainPlan][1]}">${RAIN[v.rainPlan][0]}</span>`);
+  if (v.curfewShort) out.push(`<span class="bdg">${esc(v.curfewShort)}</span>`);
+  if (v.view) out.push(`<span class="bdg">${esc(v.view)}</span>`);
+  return out.length ? `<div class="badges">${out.join("")}</div>` : "";
+}
+const appealStr = v => v.appeal && v.appeal.score ? `<span class="appeal" title="Destination appeal: would guests want to visit even without a wedding?">Appeal <b>${"●".repeat(v.appeal.score)}</b><span style="opacity:.35">${"●".repeat(5 - v.appeal.score)}</span> ${v.appeal.score}/5</span>` : "";
 function budgetPill(net){
   if (net == null) return '<span class="pill">Need price</span>';
   const b = S.a.budgetUSD, r = net / b;
@@ -354,7 +409,7 @@ function meter(net){
 }
 function monthChips(v){
   if (!v.windows.length) return '<div class="months"><span>Dates TBC</span></div>';
-  const m = months(v, S.filters.thuSun);
+  const m = months(v, true);
   return `<div class="months">${MONTHS.map(([k,l]) => `<span class="${m.has(k)?"on":""}">${l}</span>`).join("")}</div>`;
 }
 
@@ -362,14 +417,15 @@ function monthChips(v){
 function filtered(){
   const f = S.filters;
   return S.venues.filter(v => {
-    if (f.q && !(`${v.name} ${v.region} ${v.area} ${v.country} ${v.type}`.toLowerCase().includes(f.q.toLowerCase()))) return false;
-    if (f.countries.size && !f.countries.has(v.country)) return false;
-    if (f.types.size && !f.types.has(v.type)) return false;
-    if (f.sources.size && !f.sources.has(v.source === "Elena" ? "Elena" : "Other")) return false;
-    if (f.status && v.status !== f.status) return false;
+    if (f.q && !(`${v.name} ${v.region} ${v.area} ${v.country} ${v.privacy || ""}`.toLowerCase().includes(f.q.toLowerCase()))) return false;
+    if (f.country.size && !f.country.has(v.country)) return false;
+    if (f.privacy.size && !f.privacy.has(v.privacy)) return false;
+    if (f.source.size && !f.source.has(v.source)) return false;
+    if (f.setting.size && !f.setting.has(v.setting || "Countryside")) return false;
+    if (f.minrating){ const a = ratingStats(v).avg; if (f.minrating === "none" ? a != null : (a == null || a < Number(f.minrating))) return false; }
     if (v.beds < f.minbeds) return false;
-    if (f.months.size){ if (!v.windows.length) return true; const m = months(v, f.thuSun); if (![...f.months].some(x => m.has(x))) return false; }
-    else if (f.thuSun && v.windows.length && months(v, true).size === 0) return false;
+    if (f.month.size){ if (v.windows.length){ const m = months(v, true); if (![...f.month].some(x => m.has(x))) return false; } }
+    else if (f.days.size && v.windows.length && months(v, true).size === 0) return false;
     if (f.maxnet){ const c = cost(v); if (c.missing || c.net > Number(f.maxnet)) return false; }
     return true;
   }).sort((x, y) => {
@@ -381,29 +437,39 @@ function filtered(){
       case "beds": return y.beds - x.beds;
       case "rating": return (ratingStats(y).avg ?? -1) - (ratingStats(x).avg ?? -1);
       case "ours": return (ratingStats(y).oursAvg ?? -1) - (ratingStats(x).oursAvg ?? -1);
+      case "appeal": return ((y.appeal && y.appeal.score) || 0) - ((x.appeal && x.appeal.score) || 0);
       default: return x.name.localeCompare(y.name);
     }
   });
 }
 
 function renderChips(){
-  const countries = ["Italy","Portugal","Spain","Greece"];
-  const types = [...new Set(S.venues.map(v => v.type))].sort();
-  const f = S.filters;
-  const nE = S.venues.filter(v => v.source === "Elena").length;
+  const f = S.filters, uniq = k => [...new Set(S.venues.map(v => v[k]).filter(Boolean))];
+  const order = ["Italy","Spain","Portugal","Greece","Croatia"];
+  const countries = uniq("country").sort((a, z) => (order.indexOf(a) + 1 || 99) - (order.indexOf(z) + 1 || 99));
+  const privOrder = ["Multi-day buyout","Exclusive wedding day","One wedding a day, shared property","Shared"];
+  const privs = uniq("privacy").sort((a, z) => privOrder.indexOf(a) - privOrder.indexOf(z));
+  const srcLabel = x => x === "Elena" ? "From Elena" : x === "Mom" ? "Mom's picks" : x;
+  const n = (k, x) => S.venues.filter(v => (k === "setting" ? (v.setting || "Countryside") : v[k]) === x).length;
+  const sel = (key, label, opts, fmt = x => x, count = true) => {
+    const chosen = opts.filter(o => f[key].has(o));
+    const txt = !chosen.length ? label : chosen.length <= 2 ? chosen.map(fmt).join(", ") : `${chosen.length} selected`;
+    const open = S.openMenu === key;
+    return `<div class="ms ${chosen.length?"on":""}" data-ms="${key}"><button type="button" class="ms-btn" aria-haspopup="true" aria-expanded="${open}">${esc(txt)}</button>
+      <div class="ms-panel" ${open?"":"hidden"}>${opts.map(o => `<label><input type="checkbox" data-mf="${key}" value="${esc(o)}" ${f[key].has(o)?"checked":""}> ${esc(fmt(o))}${count?` <span class="muted">${n(key, o)}</span>`:""}</label>`).join("")}
+        <button type="button" class="ms-clear" data-mclear="${key}">Clear</button></div></div>`;
+  };
   $("#chiprow").innerHTML =
-    `<button type="button" class="chip" data-k="sources" data-v="Elena" aria-pressed="${f.sources.has("Elena")}">From Elena <span class="muted">${nE}</span></button>` +
-    `<button type="button" class="chip" data-k="sources" data-v="Other" aria-pressed="${f.sources.has("Other")}">Other sources <span class="muted">${S.venues.length - nE}</span></button>` +
-    '<span class="sep"></span>' +
-    countries.map(c => `<button type="button" class="chip" data-k="countries" data-v="${c}" aria-pressed="${f.countries.has(c)}">${c} <span class="muted">${S.venues.filter(v=>v.country===c).length}</span></button>`).join("") +
-    '<span class="sep"></span>' +
-    types.map(t => `<button type="button" class="chip" data-k="types" data-v="${t}" aria-pressed="${f.types.has(t)}">${t}</button>`).join("") +
-    '<span class="sep"></span>' +
-    MONTHS.map(([k,l]) => `<button type="button" class="chip" data-k="months" data-v="${k}" aria-pressed="${f.months.has(k)}">${l}</button>`).join("") +
-    `<button type="button" class="chip toggle" id="thusun" aria-pressed="${f.thuSun}" title="Only count dates where the wedding day can be Thursday to Sunday">Thu–Sun dates only</button>` +
+    sel("country", "Any country", countries) +
+    sel("setting", "Any setting", ["Sea / coast", "Lake", "Countryside"].filter(x => n("setting", x))) +
+    sel("privacy", "Any privacy", privs) +
+    sel("source", "Any source", uniq("source"), srcLabel) +
+    sel("month", "Any month", MONTHS.map(m => m[0]), k => (MONTHS.find(m => m[0] === k) || [k, k])[1], false) +
+    sel("days", "Any day", ["4","5","6","0","1","2","3"], d => ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][Number(d)], false) +
     `<span class="count" id="count"></span>`;
 }
 
+function chipsOnly(){ renderChips(); const c = $("#count"); if (c) c.textContent = `${filtered().length} of ${S.venues.length} venues`; }
 function renderStats(){
   const cs = S.venues.map(cost).filter(c => !c.missing);
   const under = cs.filter(c => c.net <= S.a.budgetUSD).length;
@@ -423,16 +489,17 @@ function photoBox(v, i = 0){
 function renderList(){
   const list = filtered();
   $("#count") && ($("#count").textContent = `${list.length} of ${S.venues.length} venues`);
-  $("#viewbtn").textContent = S.view === "grid" ? "Table view" : "Card view";
+  document.querySelectorAll("#viewseg button").forEach(x => x.setAttribute("aria-pressed", x.dataset.view === S.view));
+  if (S.view === "map"){ renderMap(list); return; }
   if (!list.length){ $("#main").innerHTML = `<div class="grid"><p class="muted">No venues match these filters. Clear a filter to see more.</p></div>`; return; }
   if (S.view === "table"){
     $("#main").innerHTML = `<div class="tablewrap"><table><thead><tr>
-      <th>Venue</th><th>Region</th><th>Type</th><th class="n">Venue fee</th><th class="n">All-in</th><th class="n">Net</th><th class="n">Net / guest</th><th>Budget at room rate</th><th class="n">Beds</th><th class="n">Plan B</th><th>Months</th><th>Rating</th><th>Status</th></tr></thead><tbody>
+      <th>Venue</th><th>Region</th><th>Privacy</th><th class="n">Venue fee</th><th class="n">All-in</th><th class="n">Net</th><th class="n">Net / guest</th><th>Budget at room rate</th><th class="n">Beds</th><th>Rain plan</th><th>Months</th><th>Rating</th><th class="n">Appeal</th></tr></thead><tbody>
       ${list.map(v => { const c = cost(v), r = ratingStats(v); return `<tr data-id="${v.id}">
-        <td><b>${esc(v.name)}</b><br><span class="muted">${esc(v.model)}</span></td><td>${esc(v.region)}, ${esc(v.country)}</td><td>${esc(v.type)}</td>
+        <td><b>${esc(v.name)}</b><br><span class="muted">${esc(v.model)}</span></td><td>${esc(v.region)}, ${esc(v.country)}</td><td>${esc(v.privacy || "—")}</td>
         <td class="n num">${feeK(c)}</td><td class="n num">${c.missing?"—":usdK(c.allIn)}</td><td class="n num"><b>${c.missing?"—":usdK(c.net)}</b></td>
-        <td class="n num">${c.missing?"—":usd(c.perGuest)}</td><td>${(b=>b.rate==null?(c.missing?"—":"No rooms"):b.rate===0?"Always":usd(b.rate)+"+")(breakeven(v))}</td><td class="n num">${v.beds||"—"}</td><td class="n num">${v.planB ?? "?"}</td><td>${monthChips(v)}</td>
-        <td>${starStr(r.avg)} ${r.all.length?`<span class="muted">(${r.all.length})</span>`:""}</td><td><span class="pill status">${esc(v.status)}</span></td></tr>`; }).join("")}
+        <td class="n num">${c.missing?"—":usd(c.perGuest)}</td><td>${(b=>b.rate==null?(c.missing?"—":"No rooms"):b.rate===0?"Always":usd(b.rate)+"+")(breakeven(v))}</td><td class="n num">${v.beds||"—"}</td><td>${v.rainPlan ? esc(RAIN[v.rainPlan] ? RAIN[v.rainPlan][0].replace("Rain plan: ","") : v.rainPlan) : "?"}</td><td>${monthChips(v)}</td>
+        <td>${starStr(r.avg)} ${r.all.length?`<span class="muted">(${r.all.length})</span>`:""}</td><td class="n num">${v.appeal && v.appeal.score ? v.appeal.score + "/5" : "—"}</td></tr>`; }).join("")}
       </tbody></table></div>`;
     return;
   }
@@ -441,7 +508,8 @@ function renderList(){
     return `<a class="card" href="#${v.id}" data-id="${v.id}">
       <div class="ph">${photoBox(v)}<span class="tag">${budgetPill(c.missing?null:c.net)}</span></div>
       <div class="cbody">
-        <div><h3>${esc(v.name)}</h3><div class="where">${esc(v.region)}, ${esc(v.country)} · ${esc(v.type)} · ${esc(v.model)}${v.source!=="Elena"?` · <b>${esc(v.source)}'s pick</b>`:""}</div></div>
+        <div><h3>${esc(v.name)}</h3><div class="where">${esc(v.region)}, ${esc(v.country)}${v.source==="Mom"?` · <b>Mom's pick</b>`:v.source!=="Elena"?` · <b>${esc(v.source)}</b>`:""}</div></div>
+        ${badges(v)}
         <div class="money">
           <div><span class="label">Net</span><b>${c.missing?"—":usdK(c.net)}</b></div>
           <div><span class="label">All-in</span><b>${c.missing?"—":usdK(c.allIn)}</b></div>
@@ -449,7 +517,8 @@ function renderList(){
         </div>
         ${meter(c.missing?null:c.net)}
         <div class="be">${breakeven(v).text}</div>${capWarn(v)}
-        <div class="facts"><span><b>${v.beds||"No"}</b> beds</span><span>Rain plan <b>${v.planB ?? "?"}</b></span>${v.maxGuests?`<span>Max <b>${v.maxGuests}</b></span>`:""}<span>${esc(v.airport.split(" (")[0])} <b>${v.airportKm?esc(kmTxt(v.airportKm)):esc(v.drive.replace(" (est.)",""))}</b></span>${v.nonstop===true?'<span><b>Nonstop</b> from NYC</span>':v.nonstop===false?'<span><b>1 stop</b> from NYC</span>':""}</div>
+        <div class="facts"><span><b>${v.beds||"No"}</b> beds</span>${v.maxGuests?`<span>Max <b>${v.maxGuests}</b></span>`:""}<span>${esc(v.airport.split(" (")[0])} <b>${v.airportKm?esc(kmTxt(v.airportKm)):esc(v.drive.replace(" (est.)",""))}</b></span>${v.nonstop===true?'<span><b>Nonstop</b> from NYC</span>':v.nonstop===false?'<span><b>1 stop</b> from NYC</span>':""}</div>
+        ${appealStr(v)}
         <div class="cfoot">${monthChips(v)}<span>${starStr(r.avg)} ${r.all.length?`<span class="muted">${r.avg.toFixed(1)} (${r.all.length})</span>`:""}</span></div>
       </div></a>`; }).join("")}</div>`;
 }
@@ -465,7 +534,7 @@ function renderDetail(v){
     const range = w.start === w.end ? fmtDate(w.s) : `${fmtDate(w.s)} – ${fmtDate(w.e)}`;
     const span = Math.round((w.e - w.s)/864e5);
     const nights = w.start === w.end ? "1 day" : span > 4 ? "any dates in this range" : `${span} night${span===1?"":"s"}`;
-    const okLabel = w.blocked ? '<span class="pill bad">Optioned</span>' : w.eligible ? '<span class="pill good">Thu–Sun ✓</span>' : '<span class="pill bad">No Thu–Sun wedding day</span>';
+    const okLabel = w.blocked ? '<span class="pill bad">Optioned</span>' : !S.filters.days.size ? "" : w.eligible ? '<span class="pill good">Matches your days ✓</span>' : '<span class="pill bad">Not on your days</span>';
     const st = /option/i.test(w.status) && !w.blocked ? `<span class="pill">${esc(w.status)}</span>` : "";
     return `<div class="date ${w.eligible?"":"out"}"><span class="when">${range}</span><span class="muted">${nights}</span>${okLabel}${st}${w.note?`<span class="muted">${esc(w.note)}</span>`:""}</div>`;
   }).join("");
@@ -482,7 +551,7 @@ function renderDetail(v){
     <a class="btn back" href="#all">← All venues</a>
     ${gallery}
     <div class="dhead"><div><div class="label">${esc(v.region)}, ${esc(v.country)} · ${esc(v.area)}</div><h2>${esc(v.name)}</h2>
-      <div class="where">${esc(v.type)} · ${esc(v.model)} · From ${esc(v.source)} · <span class="pill status">${esc(v.status)}</span></div></div>
+      <div class="where">${esc(v.privacy || v.model)} · From ${esc(v.source)}</div>${badges(v, false)}</div>
       <div>${starStr(r.avg)} ${r.avg!=null?`<span class="num">${r.avg.toFixed(1)}</span> <span class="muted">(${r.all.length})</span>`:""}</div></div>
     <div class="kpis">
       <div><span class="label">Net cost</span><b>${c.missing?"—":usd(c.net)}</b>${budgetPill(c.missing?null:c.net)}</div>
@@ -490,9 +559,9 @@ function renderDetail(v){
       <div><span class="label">Net per guest</span><b>${c.missing?"—":usd(c.perGuest)}</b></div>
       <div><span class="label">Venue fee</span><b>${c.missing?"—":usd(c.feeUsd)}</b></div>
       <div><span class="label">Beds on site</span><b>${v.beds||"None"}</b></div>
-      <div><span class="label">Rain plan</span><b>${v.planB != null ? v.planB + " pax" : "Not stated"}</b></div>
+      <div><span class="label">Rain plan</span><b style="font-size:15px">${esc(v.rainPlan || (v.planB != null ? v.planB + " pax indoors" : "Not stated"))}</b></div>
       <div><span class="label">Max guests</span><b>${v.maxGuests||"Not stated"}</b></div>
-      <div><span class="label">Source</span><b style="font-size:15px">${esc(v.source)}</b></div>
+      <div><span class="label">Destination appeal</span><b>${v.appeal && v.appeal.score ? v.appeal.score + " / 5" : "—"}</b></div>
     </div>
     ${v.about?`<p class="about">${esc(v.about)}</p>`:""}
     <section><h3>Getting there</h3><div class="getting">
@@ -500,6 +569,9 @@ function renderDetail(v){
       <div><span class="label">From New York</span><br>${esc(v.flight || "Not checked yet")}</div>
       ${v.altAirport?`<div><span class="label">Other option</span><br>${esc(v.altAirport)}</div>`:""}
     </div></section>
+    ${stayAndMap(v)}
+    ${appealSection(v)}
+    ${weatherPanel(v)}
     <p class="note"><b>Price used:</b> ${esc(v.fee.scenario)}<br>${breakeven(v).text}.</p>${capWarn(v)}
     <div class="two">
       <section><h3>Dates offered</h3><div class="dates">${dateRows}</div></section>
@@ -515,8 +587,10 @@ function renderDetail(v){
         <h3 style="margin-top:20px">Links</h3><div class="links">${Object.entries(v.links).map(([k,u])=>`<a class="btn" href="${esc(u)}" target="_blank" rel="noopener">${esc(k)} ↗</a>`).join("")}</div></section>
     </div>
     <section id="ratings"><h3>Ratings</h3>${ratingsBlock}</section>
+    <section id="comments"><h3>Comments</h3>${renderComments(v)}</section>
   </div>`;
   window.scrollTo(0, 0);
+  if (v.lat != null) drawVenueMap(v);
 }
 
 function renderRatings(v, r){
@@ -538,11 +612,161 @@ function renderRatings(v, r){
   return `<div class="two">${block("Molly & Zack", r.ours, r.oursAvg)}${block("Friends & family", r.others, r.othersAvg)}</div>${form}`;
 }
 
+// ---------- where guests stay + appeal ----------
+function stayAndMap(v){
+  const L = v.lodging || [];
+  if (!L.length && v.lat == null) return "";
+  const list = L.map(x => `<div class="panel"><b>${esc(x.name)}</b>${x.drive?` <span class="muted">· ${esc(x.drive)}</span>`:""}
+      ${x.price?`<div style="font-size:13.5px">${esc(x.price)}</div>`:""}${x.note?`<div class="muted" style="font-size:13px">${esc(x.note)}</div>`:""}</div>`).join("");
+  return `<section><h3>Where guests stay</h3>
+    <div class="two">
+      <div>${v.lat != null ? `<div class="vmap" id="vmap" role="img" aria-label="Map of ${esc(v.name)}, the airport and nearby towns"></div><p class="muted" style="font-size:12px;margin:6px 0 0">Black: venue · Blue: airport · Green: towns to stay in</p>` : ""}</div>
+      <div class="stay-list">
+        <div class="panel"><b>On site</b><div style="font-size:13.5px">${esc(v.roomsNote || (v.beds ? v.beds + " beds" : "No rooms"))}</div></div>
+        ${list || '<p class="note">Nearby lodging not researched yet.</p>'}
+        ${v.lodgingNote?`<p class="muted" style="margin:0;font-size:13px">${esc(v.lodgingNote)}</p>`:""}
+      </div>
+    </div></section>`;
+}
+function appealSection(v){
+  const a = v.appeal; if (!a || !a.score) return "";
+  return `<section><h3>Destination appeal <span class="muted" style="font-size:18px">${a.score} / 5</span></h3><div class="panel">
+    <p style="margin:0">${esc(a.why || "")}</p>
+    ${a.todo && a.todo.length ? `<div class="label" style="margin-top:10px">Things for guests to do nearby</div><ul class="thing-list">${a.todo.map(t => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
+    <p class="muted" style="font-size:12px;margin:8px 0 0">Our judgment of whether guests would want to visit even without a wedding.</p></div></section>`;
+}
+
+// ---------- maps (Leaflet, loaded only when needed) ----------
+let leafletP = null;
+function loadLeaflet(){
+  if (window.L) return Promise.resolve(window.L);
+  if (leafletP) return leafletP;
+  const css = document.createElement("link"); css.rel = "stylesheet"; css.href = "leaflet.css"; document.head.appendChild(css);
+  leafletP = new Promise((res, rej) => { const s = document.createElement("script"); s.src = "leaflet.js"; s.onload = () => res(window.L); s.onerror = () => { leafletP = null; rej(new Error("map")); }; document.head.appendChild(s); });
+  return leafletP;
+}
+function baseMap(el, opts){
+  const m = L.map(el, Object.assign({ scrollWheelZoom:false, worldCopyJump:false }, opts || {}));
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom:18, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(m);
+  return m;
+}
+const pinIcon = (html, cls) => L.divIcon({ className:"", html:`<div class="pin ${cls}">${html}</div>`, iconSize:null, iconAnchor:[0,0] });
+function costCls(c){ if (c.missing) return "none"; const r = c.net / S.a.budgetUSD; return r <= 0.9 ? "good" : r <= 1 ? "warn" : "bad"; }
+function miniCard(v){
+  const c = cost(v), r = ratingStats(v);
+  return `<div class="mini">${v.photos && v.photos.length ? `<img src="${esc(v.photos[0])}" alt="">` : ""}
+    <h4>${esc(v.name)}</h4><div class="m">${esc(v.region)}, ${esc(v.country)}${v.privacy?` · ${esc(v.privacy)}`:""}</div>
+    <div class="row"><span><b>${c.missing?"—":usdK(c.net)}</b> <span class="m">net</span> ${r.avg!=null?` · ${r.avg.toFixed(1)}★`:""}</span><a class="open" href="#${v.id}">Open</a></div></div>`;
+}
+let bigMap = null;
+async function renderMap(list){
+  $("#main").innerHTML = `<p class="muted" style="margin:16px 0 -10px;font-size:13px">Pins are colored by net cost: green under budget, amber at budget, red over. Zoom in to see prices; click a pin for the venue card.</p><div id="mapview" role="region" aria-label="Map of venues"></div>`;
+  const placed = list.filter(v => v.lat != null && v.lng != null);
+  try { await loadLeaflet(); } catch(e){ $("#main").innerHTML = '<p class="note">The map couldn\'t load. Refresh the page to try again.</p>'; return; }
+  if (!$("#mapview")) return;
+  if (bigMap){ bigMap.remove(); bigMap = null; }
+  bigMap = baseMap("mapview");
+  const pts = [], mks = [];
+  const iconFor = (c, zoom) => zoom >= 8 ? pinIcon(c.missing ? "?" : usdK(c.net), costCls(c)) : pinIcon("", "dot " + costCls(c));
+  placed.forEach(v => {
+    const c = cost(v);
+    const mk = L.marker([v.lat, v.lng], { icon: iconFor(c, 5), title: v.name, riseOnHover:true }).addTo(bigMap);
+    mk.bindPopup(miniCard(v), { maxWidth:260, minWidth:240 });
+    mk.bindTooltip(`${esc(v.name)} · ${c.missing ? "no price" : usdK(c.net)}`, { direction:"top", offset:[0,-10] });
+    mks.push([mk, c]); pts.push([v.lat, v.lng]);
+  });
+  const restyle = () => { const z = bigMap.getZoom(); mks.forEach(([mk, c]) => mk.setIcon(iconFor(c, z))); };
+  bigMap.on("zoomend", restyle);
+  if (pts.length) bigMap.fitBounds(pts, { padding:[40,40], maxZoom:8 }); else bigMap.setView([42, 10], 4);
+  restyle();
+  const missing = list.length - placed.length;
+  if (missing) $("#main").insertAdjacentHTML("beforeend", `<p class="muted" style="margin-top:-28px">${missing} venue${missing>1?"s":""} not on the map yet.</p>`);
+}
+async function drawVenueMap(v){
+  try { await loadLeaflet(); } catch(e){ const el = $("#vmap"); if (el) el.outerHTML = '<p class="note">The map couldn\'t load.</p>'; return; }
+  const el = document.getElementById("vmap"); if (!el || el._leaflet_id) return;
+  const m = baseMap(el), pts = [[v.lat, v.lng]];
+  L.marker([v.lat, v.lng], { icon: pinIcon(esc(v.name), "venue"), zIndexOffset:1000 }).addTo(m);
+  if (v.airportLat != null){ L.marker([v.airportLat, v.airportLng], { icon: pinIcon("✈ " + esc(v.airport.split(" (")[0]), "air") }).addTo(m).bindPopup(`${esc(v.airport)}<br>${esc(v.drive || "")}`); pts.push([v.airportLat, v.airportLng]); }
+  (v.lodging || []).forEach(x => { if (x.lat == null) return; L.marker([x.lat, x.lng], { icon: pinIcon(esc(x.name), "stay") }).addTo(m).bindPopup(`<b>${esc(x.name)}</b><br>${esc(x.drive || "")}${x.price?`<br>${esc(x.price)}`:""}`); pts.push([x.lat, x.lng]); });
+  if (pts.length > 1) m.fitBounds(pts, { padding:[50,50], maxZoom:12 }); else m.setView(pts[0], 11);
+}
+
+// ---------- comments ----------
+function renderComments(v){
+  const list = S.comments.filter(c => c.venue === v.id).sort((a, z) => String(a.created).localeCompare(String(z.created)));
+  const couple = S.config.couple.map(n => n.toLowerCase());
+  const when = s => { const d = s ? new Date(s) : null; return d && !isNaN(d) ? d.toLocaleDateString("en-US", { month:"short", day:"numeric", year:"numeric" }) : ""; };
+  const thread = list.length ? `<div class="cmts">${list.map(c => `<div class="cmt ${couple.includes(String(c.name).trim().toLowerCase())?"couple":""}"><div class="row" style="justify-content:space-between"><span class="who">${esc(c.name)}</span><span class="when">${when(c.created)}</span></div><div style="white-space:pre-wrap">${esc(c.text)}</div></div>`).join("")}</div>` : '<p class="muted" style="margin:0">No comments yet.</p>';
+  if (!S.commentsOn) return thread + `<p class="note" style="margin-top:10px">Comments switch on after the Google Sheet script is updated.</p>`;
+  const me = store.get("venue-rater") || "";
+  return thread + `<form class="rate panel" id="cmtform" style="margin-top:10px"><b>Add a comment</b>
+    <label class="label" for="cname">Your name</label><input type="text" id="cname" value="${esc(me)}" required maxlength="40" autocomplete="name">
+    <label class="label" for="ctext">Comment</label><textarea id="ctext" rows="3" maxlength="1000" required></textarea>
+    <div class="row"><button class="btn primary" type="submit">Post comment</button><span class="muted" id="cmsg"></span></div></form>`;
+}
+async function submitComment(v){
+  const name = $("#cname").value.trim(), text = $("#ctext").value.trim();
+  if (!name || !text){ $("#cmsg").textContent = "Add your name and a comment."; return; }
+  $("#cmsg").textContent = "Posting…";
+  try {
+    await fetch(S.config.ratingsUrl, { method:"POST", headers:{ "Content-Type":"text/plain;charset=utf-8" }, body: JSON.stringify({ kind:"comment", venue:v.id, name, text }) });
+    store.set("venue-rater", name);
+    S.comments.push({ venue:v.id, name, text, created:new Date().toISOString() });
+    $("#comments").innerHTML = `<h3>Comments</h3>${renderComments(v)}`;
+  } catch(e){ $("#cmsg").textContent = "Couldn't post. Check your connection and try again."; }
+}
+
+// ---------- weather ----------
+function weatherPanel(v){
+  const w = v.climate && S.weather[v.climate];
+  if (!w) return "";
+  const hiCls = f => f >= 90 ? "hot" : f >= 84 ? "warm" : "ok";
+  const rnCls = d => d >= 8 ? "hot" : d >= 5 ? "warm" : "ok";
+  const months = [["Jul","07"],["Aug","08"],["Sep","09"],["Oct","10"]];
+  return `<section><h3>Weather <span class="muted" style="font-size:16px">(${esc(w.station)})</span></h3><div class="panel" style="overflow-x:auto">
+    <table class="wx"><thead><tr><th></th>${months.map(m=>`<th>${m[0]}</th>`).join("")}</tr></thead><tbody>
+      <tr><td>Avg high</td>${months.map(m=>{const x=w.months[m[1]];return x?`<td class="${hiCls(x.highF)}">${x.highF}°F</td>`:"<td>—</td>"}).join("")}</tr>
+      <tr><td>Avg low</td>${months.map(m=>{const x=w.months[m[1]];return x?`<td>${x.lowF}°F</td>`:"<td>—</td>"}).join("")}</tr>
+      <tr><td>${esc(w.humidityLabel || "Humidity")}</td>${months.map(m=>{const x=w.months[m[1]];return x&&x.humidity!=null?`<td>${esc(x.humidity)}</td>`:"<td>—</td>"}).join("")}</tr>
+      <tr><td>Rainy days</td>${months.map(m=>{const x=w.months[m[1]];return x?`<td class="${rnCls(x.rainDays)}">${x.rainDays}</td>`:"<td>—</td>"}).join("")}</tr>
+      <tr><td>Rain</td>${months.map(m=>{const x=w.months[m[1]];return x?`<td>${x.rainMm} mm</td>`:"<td>—</td>"}).join("")}</tr>
+    </tbody></table>
+    ${w.note?`<p class="muted" style="font-size:12.5px;margin:8px 0 0">${esc(w.note)}</p>`:""}
+    ${w.safety?`<p style="font-size:13px;margin:8px 0 0"><b>Safety:</b> ${esc(w.safety)}</p>`:""}
+    ${w.src?`<a class="src" href="${esc(w.src)}" target="_blank" rel="noopener">source ↗</a>`:""}
+  </div></section>`;
+}
+
+// ---------- planners ----------
+function renderPlanners(){
+  const ps = S.planners || [];
+  const byC = {}; ps.forEach(p => (byC[p.country] ||= []).push(p));
+  const verdictCls = v => /recommend/i.test(v) ? "good" : /avoid/i.test(v) ? "bad" : "warn";
+  $("#main").innerHTML = `<div class="detail" style="gap:16px"><h2 style="font-size:40px">Planners</h2>
+    <p class="muted" style="margin:0;max-width:70ch">Local planners we've vetted for countries outside Elena's area. Ratings are checked across several sites for consistency and signs of fake reviews.</p>
+    ${!ps.length ? '<p class="note">No planners added yet.</p>' : Object.entries(byC).map(([c, list]) => `<section><h3>${esc(c)}</h3><div class="pl-grid">${list.map(p => `
+      <div class="panel" style="display:flex;flex-direction:column;gap:8px">
+        <div class="row" style="justify-content:space-between"><h3 style="font-size:24px;margin:0">${esc(p.name)}</h3><span class="pill ${verdictCls(p.verdict)}">${esc(p.verdict)}</span></div>
+        <div class="muted" style="font-size:13px">${esc(p.basedIn||"")}${p.regions?` · Covers ${esc(p.regions)}`:""}${p.years?` · ${esc(p.years)}`:""}</div>
+        ${p.summary?`<p style="margin:0">${esc(p.summary)}</p>`:""}
+        <div style="font-size:13.5px"><b>Fees:</b> ${esc(p.fees || "Not published")}</div>
+        <div style="font-size:13.5px"><b>Ratings:</b> ${(p.ratings||[]).map(r => r.url?`<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.platform)} ${esc(r.score)} (${esc(r.count)})</a>`:`${esc(r.platform)} ${esc(r.score)} (${esc(r.count)})`).join(" · ") || "—"}</div>
+        ${p.venues?`<div style="font-size:13.5px"><b>Venues worked at:</b> ${esc(p.venues)}</div>`:""}
+        <div class="two" style="gap:14px"><div><span class="label">Praise</span><ul class="plain">${items(p.praise)}</ul></div><div><span class="label">Watch-outs</span><ul class="plain">${items(p.concerns)}</ul></div></div>
+        <div class="row">${p.website?`<a class="btn primary" href="${esc(p.website)}" target="_blank" rel="noopener">Website ↗</a>`:""}${p.contact?`<span class="muted" style="font-size:12.5px;user-select:all">${esc(p.contact)}</span>`:""}</div>
+      </div>`).join("")}</div></section>`).join("")}
+  </div>`;
+}
+
 // ---------- to-do ----------
 function todoItems(){
   const groups = [];
-  const gen = (S.config.todos || []).map((t, k) => ({ id:"gen-" + k, text:t, kind:"Plan" }));
-  groups.push({ title:"Planning", items:gen, venue:null });
+  const gen = (S.config.todos || []).map((t, k) => Array.isArray(t) ? { id:t[0], text:t[1], kind:"Plan" } : { id:"gen-" + k, text:t, kind:"Plan" });
+  groups.push({ title:"Planning", items:gen, venue:null, country:"General" });
+  (S.planners || []).filter(p => /recommend/i.test(p.verdict)).forEach(p => {
+    groups.push({ title:"Planner: " + p.name, items:[{ id:"pl-" + p.name.toLowerCase().replace(/[^a-z0-9]+/g,"-"), text:`Contact about ${p.country} (${p.regions || "availability and fees"})`, kind:"Reach out" }], venue:null, link:p.website, contactInfo:p.contact, country:p.country });
+  });
   S.venues.forEach(v => {
     const its = [];
     const via = v.source === "Elena" ? "Ask Elena" : "Ask venue";
@@ -551,26 +775,39 @@ function todoItems(){
     if (!v.photos.length) its.push({ id:v.id + "-photos", text:"Find photos", kind:"Missing" });
     if (!v.windows.length) its.push({ id:v.id + "-dates", text:"Ask for 2027 availability", kind:"Missing" });
     (v.questions || []).forEach((q, k) => its.push({ id:v.id + "-q" + k + "-" + (typeof q === "string" ? q : q.t).length, text: typeof q === "string" ? q : q.t, kind: via }));
-    groups.push({ title:v.name, items:its, venue:v });
+    groups.push({ title:v.name, items:its, venue:v, country:v.country });
   });
   return groups;
 }
 function renderTodo(){
   const groups = todoItems(), live = S.ratingsState === "on";
   const open = groups.reduce((t, g) => t + g.items.filter(i => !S.done.has(i.id)).length, 0);
+  const order = ["General", "Italy", "Spain", "Portugal", "Greece", "Croatia"];
+  const countries = [...new Set(groups.map(g => g.country))].sort((a, z) => (order.indexOf(a) + 1 || 99) - (order.indexOf(z) + 1 || 99));
+  const notes = S.config.countryNotes || {};
+  const groupHtml = g => {
+    const its = g.items.filter(i => S.todoFilter === "all" || !S.done.has(i.id));
+    if (!its.length) return "";
+    const v = g.venue, contact = v ? (v.links.Contact || v.links.Website || v.links["More info"]) : g.link;
+    return `<div class="todo-group"><header><div><h3>${esc(g.title)}</h3>${v?`<span class="muted" style="font-size:13px">${esc(v.region)} · ${esc(v.source)}</span>`:""}</div>
+      <div class="row">${v?`<a class="btn" href="#${v.id}">Details</a>`:""}${contact?`<a class="btn primary" href="${esc(contact)}" target="_blank" rel="noopener">Contact ↗</a>`:""}</div></header>
+      ${(v ? v.contactInfo : g.contactInfo) ? `<div class="muted" style="font-size:12.5px;user-select:all">${esc(v ? v.contactInfo : g.contactInfo)}</div>` : ""}
+      ${its.map(i => `<label class="todo ${S.done.has(i.id)?"done":""}"><input type="checkbox" data-todo="${esc(i.id)}" ${S.done.has(i.id)?"checked":""} ${live?"":"disabled"}><span><span class="kind">${i.kind}</span>${esc(i.text)}</span></label>`).join("")}
+    </div>`;
+  };
   $("#main").innerHTML = `<div class="detail" style="gap:12px">
     <div class="row" style="justify-content:space-between"><h2 style="font-size:40px">To-do</h2>
       <div class="row"><button class="chip" type="button" data-tf="open" aria-pressed="${S.todoFilter==="open"}">Open (${open})</button><button class="chip" type="button" data-tf="all" aria-pressed="${S.todoFilter==="all"}">All</button></div></div>
     ${live ? "" : '<p class="note">Ticking items off saves for everyone once the site is connected to the Google Sheet. Until then, the list is read-only.</p>'}
-    <div class="todos" style="padding-block:4px 40px">${groups.map(g => {
-      const its = g.items.filter(i => S.todoFilter === "all" || !S.done.has(i.id));
-      if (!its.length) return "";
-      const v = g.venue, contact = v && (v.links.Contact || v.links.Website || v.links["More info"]);
-      return `<div class="todo-group"><header><div><h3>${esc(g.title)}</h3>${v?`<span class="muted" style="font-size:13px">${esc(v.region)} · ${esc(v.source)}</span>`:""}</div>
-        <div class="row">${v?`<a class="btn" href="#${v.id}">Details</a>`:""}${contact?`<a class="btn primary" href="${esc(contact)}" target="_blank" rel="noopener">Contact ↗</a>`:""}</div></header>
-        ${v && v.contactInfo ? `<div class="muted" style="font-size:12.5px;user-select:all">${esc(v.contactInfo)}</div>` : ""}
-        ${its.map(i => `<label class="todo ${S.done.has(i.id)?"done":""}"><input type="checkbox" data-todo="${esc(i.id)}" ${S.done.has(i.id)?"checked":""} ${live?"":"disabled"}><span><span class="kind">${i.kind}</span>${esc(i.text)}</span></label>`).join("")}
-      </div>`; }).join("")}</div></div>`;
+    ${countries.map(c => {
+      const gs = groups.filter(g => g.country === c), body = gs.map(groupHtml).join("");
+      if (!body) return "";
+      const left = gs.reduce((t, g) => t + g.items.filter(i => !S.done.has(i.id)).length, 0);
+      return `<section class="todo-country"><div class="row" style="justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:6px">
+          <h2 style="font-size:30px">${esc(c === "General" ? "General planning" : c)} <span class="muted num" style="font-size:15px">${left} open</span></h2></div>
+        ${notes[c] ? `<p class="muted" style="margin:6px 0 0">${esc(notes[c])}</p>` : ""}
+        <div class="todos" style="padding-block:12px 28px">${body}</div></section>`;
+    }).join("")}</div>`;
 }
 async function toggleTodo(id, done){
   if (done) S.done.add(id); else S.done.delete(id);
@@ -616,7 +853,7 @@ async function loadRatings(){
   const url = S.config.ratingsUrl;
   if (!url){ S.ratingsState = "off"; return; }
   S.ratingsState = "loading";
-  try { const res = await fetch(url); const j = await res.json(); S.ratings = (j.ratings || []).map(x => ({ venue:x.venue, name:x.name, stars:Number(x.stars), comment:x.comment || "" })); S.done = new Set(j.done || []); S.ratingsState = "on"; }
+  try { const res = await fetch(url); const j = await res.json(); S.ratings = (j.ratings || []).map(x => ({ venue:x.venue, name:x.name, stars:Number(x.stars), comment:x.comment || "" })); S.done = new Set(j.done || []); S.commentsOn = Array.isArray(j.comments); S.comments = (j.comments || []).map(x => ({ venue:x.venue, name:x.name, text:x.text, created:x.created || "" })); S.ratingsState = "on"; }
   catch(e){ S.ratingsState = "error"; }
 }
 async function submitRating(v){
@@ -637,28 +874,35 @@ async function submitRating(v){
 // ---------- routing & events ----------
 function current(){ const h = location.hash.slice(1); return S.venues.find(v => v.id === h); }
 function route(){
-  const h = location.hash.slice(1), v = current(), todo = h === "todo";
-  $("#controls").hidden = !!v || todo;
-  $("#tab-all").setAttribute("aria-current", todo ? "false" : "page"); $("#tab-todo").setAttribute("aria-current", todo ? "page" : "false");
+  const h = location.hash.slice(1), v = current(), todo = h === "todo", pl = h === "planners";
+  $("#controls").hidden = !!v || todo || pl;
+  $("#tab-planners").hidden = !(S.planners && S.planners.length);
+  $("#tab-all").setAttribute("aria-current", (todo || pl) ? "false" : "page"); $("#tab-todo").setAttribute("aria-current", todo ? "page" : "false"); $("#tab-planners").setAttribute("aria-current", pl ? "page" : "false");
   updateTodoCount();
-  if (todo) renderTodo(); else if (v) renderDetail(v); else renderList();
+  if (todo) renderTodo(); else if (pl) renderPlanners(); else if (v) renderDetail(v); else renderList();
 }
 function refresh(){ syncRate(); renderStats(); renderChips(); route(); }
 
 document.addEventListener("click", e => {
-  const chip = e.target.closest("[data-k]");
-  if (chip && chip.closest("#chiprow")){ const set = S.filters[chip.dataset.k]; set.has(chip.dataset.v) ? set.delete(chip.dataset.v) : set.add(chip.dataset.v); renderChips(); renderList(); return; }
-  if (e.target.closest("#thusun")){ S.filters.thuSun = !S.filters.thuSun; renderChips(); renderList(); return; }
+  const msb = e.target.closest(".ms-btn"); if (msb){ const k = msb.closest(".ms").dataset.ms; S.openMenu = S.openMenu === k ? null : k; chipsOnly(); return; }
+  const mc = e.target.closest("[data-mclear]"); if (mc){ S.filters[mc.dataset.mclear].clear(); S.openMenu = null; renderChips(); renderList(); return; }
+  if (S.openMenu && !e.target.closest(".ms-panel")){ S.openMenu = null; chipsOnly(); }
   const tr = e.target.closest("tr[data-id]"); if (tr){ location.hash = tr.dataset.id; return; }
   const ph = e.target.closest("[data-ph]"); if (ph){ const v = current(); S.photoIdx[v.id] = Number(ph.dataset.ph); renderDetail(v); return; }
   const sb = e.target.closest("#starpick button"); if (sb){ const n = Number(sb.dataset.s), p = $("#starpick"); p.dataset.val = n; p.querySelectorAll("button").forEach(b => b.classList.toggle("on", Number(b.dataset.s) <= n)); return; }
-  if (e.target.closest("#viewbtn")){ S.view = S.view === "grid" ? "table" : "grid"; store.set("venue-view", S.view); renderList(); return; }
+  const vb = e.target.closest("#viewseg [data-view]"); if (vb){ S.view = vb.dataset.view; store.set("venue-view", S.view); renderList(); return; }
   if (e.target.closest("#setbtn")){ openSettings(); return; }
   const tf = e.target.closest("[data-tf]"); if (tf){ S.todoFilter = tf.dataset.tf; renderTodo(); return; }
   const back = e.target.closest('a[href="#all"]'); if (back){ e.preventDefault(); history.pushState(null, "", location.pathname + location.search); route(); }
 });
-document.addEventListener("change", e => { const t = e.target.closest("[data-todo]"); if (t) toggleTodo(t.dataset.todo, t.checked); });
-document.addEventListener("submit", e => { if (e.target.id === "rateform"){ e.preventDefault(); const v = current(); if (v) submitRating(v); } });
+document.addEventListener("change", e => {
+  const t = e.target.closest("[data-todo]"); if (t) toggleTodo(t.dataset.todo, t.checked);
+  const mf = e.target.closest("input[data-mf]"); if (mf){ const s = S.filters[mf.dataset.mf]; mf.checked ? s.add(mf.value) : s.delete(mf.value); S.openMenu = mf.dataset.mf; renderChips(); renderList(); }
+});
+document.addEventListener("submit", e => {
+  if (e.target.id === "rateform"){ e.preventDefault(); const v = current(); if (v) submitRating(v); }
+  if (e.target.id === "cmtform"){ e.preventDefault(); const v = current(); if (v) submitComment(v); }
+});
 function syncRate(){ $("#rate").value = S.a.roomRateUSD; $("#rateval").textContent = usd(S.a.roomRateUSD); }
 $("#rate").addEventListener("input", e => {
   S.a.roomRateUSD = Number(e.target.value); syncRate();
@@ -669,14 +913,16 @@ $("#q").addEventListener("input", e => { S.filters.q = e.target.value; renderLis
 $("#sort").addEventListener("change", e => { S.sort = e.target.value; renderList(); });
 $("#maxnet").addEventListener("change", e => { S.filters.maxnet = e.target.value; renderList(); });
 $("#minbeds").addEventListener("change", e => { S.filters.minbeds = Number(e.target.value); renderList(); });
-$("#status").addEventListener("change", e => { S.filters.status = e.target.value; renderList(); });
+$("#minrating").addEventListener("change", e => { S.filters.minrating = e.target.value; renderList(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && S.openMenu){ S.openMenu = null; chipsOnly(); } });
 window.addEventListener("hashchange", route);
 window.addEventListener("popstate", route);
 
 async function boot(){
   try {
-    const [venues, config] = await Promise.all([fetch("venues.json").then(r => r.json()), fetch("config.json").then(r => r.json())]);
-    S.venues = venues; S.config = config; S.a = assumptions(); S.view = store.get("venue-view") || "grid";
+    const get = async (n, optional) => { for (const p of ["data/" + n, n]) { try { const r = await fetch(p); if (r.ok) return await r.json(); } catch(e){} } if (optional) return null; throw new Error(n); };
+    const [venues, config, weather, planners] = await Promise.all([get("venues.json"), get("config.json"), get("weather.json", true), get("planners.json", true)]);
+    S.venues = venues; S.config = config; S.weather = weather || {}; S.planners = planners || []; S.a = assumptions(); S.view = store.get("venue-view") || "grid";
   } catch(e){ $("#main").innerHTML = `<p class="note">The venue list couldn't load. Refresh the page to try again.</p>`; return; }
   refresh();
   await loadRatings(); route();
@@ -684,6 +930,7 @@ async function boot(){
 boot();
 })();
 </script>
+
 
 </body>
 </html>

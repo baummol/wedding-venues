@@ -140,7 +140,53 @@
    "castello-di-xirumi-3.jpg"
   ],
   "setting": "Countryside",
-  "climate": "catania"
+  "climate": "catania",
+  "lat": 37.3431,
+  "lng": 14.834,
+  "privacy": "Multi-day buyout",
+  "rainPlan": "Unconfirmed",
+  "curfewShort": "Curfew unknown",
+  "view": "Countryside",
+  "lodging": [
+   {
+    "name": "Lentini",
+    "drive": "~15 min",
+    "price": "Few small hotels and B&Bs, ~€90–150/night (est.)",
+    "lat": 37.2858,
+    "lng": 14.9997,
+    "note": ""
+   },
+   {
+    "name": "Catania",
+    "drive": "~40 min",
+    "price": "Large city choice, ~€130–220/night (est.)",
+    "lat": 37.5079,
+    "lng": 15.083,
+    "note": ""
+   },
+   {
+    "name": "Ortigia (Syracuse)",
+    "drive": "~50 min",
+    "price": "Many boutique hotels, ~€180–300/night (est.)",
+    "lat": 37.0597,
+    "lng": 15.2936,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "Inland countryside: shuttles or rental cars needed. Press coverage of a 2025 wedding here said housing guests was the main headache.",
+  "appeal": {
+   "score": 3,
+   "why": "Rural inland site with nothing walkable, but Ortigia, Catania and Mount Etna are all within about an hour, so guests would base themselves elsewhere.",
+   "todo": [
+    "Ortigia (Syracuse) old town",
+    "Mount Etna excursion",
+    "Noto's baroque old town (~1 hr)",
+    "Catania fish market",
+    "Taormina (~1 hr 15)"
+   ]
+  },
+  "airportLat": 37.4668,
+  "airportLng": 15.0664
  },
  {
   "id": "commenda-di-san-calogero",
@@ -265,7 +311,53 @@
    "commenda-di-san-calogero-3.jpg"
   ],
   "setting": "Sea / coast",
-  "climate": "syracuse"
+  "climate": "syracuse",
+  "lat": 37.283,
+  "lng": 15.165,
+  "privacy": "Exclusive wedding day",
+  "rainPlan": "Unconfirmed",
+  "curfewShort": "Curfew unknown",
+  "view": "Sea view",
+  "lodging": [
+   {
+    "name": "Brucoli / Agnone coast",
+    "drive": "~10 min",
+    "price": "A few beach hotels, ~€120–200/night (est.)",
+    "lat": 37.285,
+    "lng": 15.185,
+    "note": ""
+   },
+   {
+    "name": "Catania",
+    "drive": "~35 min",
+    "price": "Large city choice, ~€130–220/night (est.)",
+    "lat": 37.5079,
+    "lng": 15.083,
+    "note": ""
+   },
+   {
+    "name": "Ortigia (Syracuse)",
+    "drive": "~40 min",
+    "price": "Many boutique hotels, ~€180–300/night (est.)",
+    "lat": 37.0597,
+    "lng": 15.2936,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "Sleeps about 20 on site; everyone else needs rental cars or shuttles.",
+  "appeal": {
+   "score": 3,
+   "why": "On the coast between Catania and Syracuse, close to Ortigia and Etna, but the immediate area (near the Augusta industrial zone) has little to see.",
+   "todo": [
+    "Ortigia (Syracuse)",
+    "Mount Etna",
+    "Noto",
+    "Catania",
+    "Swimming at the Brucoli coves"
+   ]
+  },
+  "airportLat": 37.4668,
+  "airportLng": 15.0664
  },
  {
   "id": "masseria-grieco",
@@ -380,7 +472,53 @@
    "masseria-grieco-3.jpg"
   ],
   "setting": "Countryside",
-  "climate": "puglia"
+  "climate": "puglia",
+  "lat": 40.69358,
+  "lng": 17.5044,
+  "privacy": "Multi-day buyout",
+  "rainPlan": "Unconfirmed",
+  "curfewShort": "Curfew unknown",
+  "view": "Countryside",
+  "lodging": [
+   {
+    "name": "Ostuni",
+    "drive": "~15 min",
+    "price": "Many boutique hotels and B&Bs, ~€150–280/night (est.)",
+    "lat": 40.729,
+    "lng": 17.5776,
+    "note": ""
+   },
+   {
+    "name": "Cisternino",
+    "drive": "~15 min",
+    "price": "B&Bs and trulli, ~€110–200/night (est.)",
+    "lat": 40.7419,
+    "lng": 17.4258,
+    "note": ""
+   },
+   {
+    "name": "Locorotondo",
+    "drive": "~20 min",
+    "price": "B&Bs, ~€110–200/night (est.)",
+    "lat": 40.7556,
+    "lng": 17.3264,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "Sleeps about 60 on site. Rental cars needed; the venue offers paid airport transfers.",
+  "appeal": {
+   "score": 4,
+   "why": "Puglia's Itria Valley: trulli towns, Adriatic beaches and great food. A well-loved holiday area, if not as famous as Florence or Como.",
+   "todo": [
+    "Alberobello's trulli",
+    "Ostuni, the 'white town'",
+    "Polignano a Mare",
+    "Torre Canne and Rosa Marina beaches",
+    "Lecce (~1 hr)"
+   ]
+  },
+  "airportLat": 40.6576,
+  "airportLng": 17.947
  },
  {
   "id": "viesca",
@@ -491,7 +629,45 @@
    "viesca-6.jpg"
   ],
   "setting": "Countryside",
-  "climate": "florence"
+  "climate": "florence",
+  "lat": 43.63625,
+  "lng": 11.4897,
+  "privacy": "One wedding a day, shared property",
+  "rainPlan": "Indoor space for 100",
+  "curfewShort": "Curfew unknown",
+  "view": "Countryside",
+  "lodging": [
+   {
+    "name": "Figline / Incisa Valdarno",
+    "drive": "~10–15 min",
+    "price": "Mid-range hotels and agriturismi, ~€110–180/night (est.)",
+    "lat": 43.62,
+    "lng": 11.47,
+    "note": ""
+   },
+   {
+    "name": "Florence",
+    "drive": "~35–40 min",
+    "price": "Hundreds of hotels, ~€250–450/night (est.)",
+    "lat": 43.7696,
+    "lng": 11.2558,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "A hotel with on-site rooms; a full buyout of the estate is possible. Shuttles needed for anyone staying off site.",
+  "appeal": {
+   "score": 5,
+   "why": "Florence is about 35 minutes away and Chianti is next door.",
+   "todo": [
+    "Florence",
+    "Chianti wineries (Greve, Panzano)",
+    "The Mall luxury outlet (~10 min)",
+    "Siena (~1 hr)",
+    "Il Borro village"
+   ]
+  },
+  "airportLat": 43.81,
+  "airportLng": 11.2051
  },
  {
   "id": "borgo-corsignano",
@@ -593,6 +769,10 @@
    {
     "t": "Lunch and dinner catering not included",
     "src": null
+   },
+   {
+    "t": "For guests: Off the tourist circuit: Florence is over an hour away on mountain roads, so guests have little to do nearby",
+    "src": null
    }
   ],
   "questions": [
@@ -607,7 +787,53 @@
    "borgo-corsignano-3.jpg"
   ],
   "setting": "Countryside",
-  "climate": "casentino"
+  "climate": "casentino",
+  "lat": 43.71,
+  "lng": 11.77,
+  "privacy": "Multi-day buyout",
+  "rainPlan": "Unconfirmed",
+  "curfewShort": "Curfew unknown",
+  "view": "Countryside",
+  "lodging": [
+   {
+    "name": "Poppi",
+    "drive": "~5 min",
+    "price": "A few small hotels and B&Bs, ~€90–150/night (est.)",
+    "lat": 43.722,
+    "lng": 11.764,
+    "note": ""
+   },
+   {
+    "name": "Bibbiena",
+    "drive": "~10 min",
+    "price": "Small hotels, ~€80–140/night (est.)",
+    "lat": 43.697,
+    "lng": 11.816,
+    "note": ""
+   },
+   {
+    "name": "Arezzo",
+    "drive": "~45 min",
+    "price": "City hotels, ~€120–200/night (est.)",
+    "lat": 43.4633,
+    "lng": 11.8796,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "43 bedrooms on site cover most guests. Shuttles needed for the rest.",
+  "appeal": {
+   "score": 2,
+   "why": "The Casentino valley is pretty and quiet but off the tourist circuit; Florence and Arezzo are each 45–60+ minutes away.",
+   "todo": [
+    "Poppi castle",
+    "Camaldoli monastery and forest",
+    "La Verna sanctuary",
+    "Casentinesi Forests National Park",
+    "Arezzo (~45 min)"
+   ]
+  },
+  "airportLat": 43.81,
+  "airportLng": 11.2051
  },
  {
   "id": "villa-la-selva",
@@ -725,7 +951,53 @@
    "villa-la-selva-6.jpg"
   ],
   "setting": "Countryside",
-  "climate": "florence"
+  "climate": "florence",
+  "lat": 43.447,
+  "lng": 11.656,
+  "privacy": "Multi-day buyout",
+  "rainPlan": "Unconfirmed",
+  "curfewShort": "Curfew unknown",
+  "view": "Countryside",
+  "lodging": [
+   {
+    "name": "Bucine / Ambra",
+    "drive": "~15 min",
+    "price": "Agriturismi and B&Bs, ~€100–170/night (est.)",
+    "lat": 43.479,
+    "lng": 11.615,
+    "note": ""
+   },
+   {
+    "name": "Montevarchi",
+    "drive": "~20 min",
+    "price": "Small hotels, ~€90–150/night (est.)",
+    "lat": 43.524,
+    "lng": 11.568,
+    "note": ""
+   },
+   {
+    "name": "Siena",
+    "drive": "~45 min",
+    "price": "Many hotels, ~€150–280/night (est.)",
+    "lat": 43.3188,
+    "lng": 11.3308,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "Rental cars or shuttles needed for guests staying off site.",
+  "appeal": {
+   "score": 4,
+   "why": "On the edge of Chianti, about 45 minutes from Siena and an hour from Florence. Classic Tuscany, but rural.",
+   "todo": [
+    "Siena",
+    "Chianti wineries (Gaiole, Radda)",
+    "Arezzo",
+    "Montebenichi hamlet",
+    "Florence (~1 hr)"
+   ]
+  },
+  "airportLat": 43.81,
+  "airportLng": 11.2051
  },
  {
   "id": "villa-gamberaia",
@@ -816,6 +1088,10 @@
    {
     "t": "Rain plan only 100; sleeps ~40",
     "src": null
+   },
+   {
+    "t": "For guests: Central Florence upscale hotels often run over €350/night in September (est.)",
+    "src": null
    }
   ],
   "questions": [
@@ -831,7 +1107,53 @@
    "villa-gamberaia-5.jpg"
   ],
   "setting": "Countryside",
-  "climate": "florence"
+  "climate": "florence",
+  "lat": 43.7795,
+  "lng": 11.3197,
+  "privacy": "Multi-day buyout",
+  "rainPlan": "Unconfirmed",
+  "curfewShort": "Curfew unknown",
+  "view": "Countryside",
+  "lodging": [
+   {
+    "name": "Florence centre",
+    "drive": "~15–20 min",
+    "price": "Hundreds of hotels, ~€250–450/night (est.)",
+    "lat": 43.7696,
+    "lng": 11.2558,
+    "note": ""
+   },
+   {
+    "name": "Fiesole",
+    "drive": "~15 min",
+    "price": "A few upscale hotels, ~€250–500/night (est.)",
+    "lat": 43.807,
+    "lng": 11.293,
+    "note": ""
+   },
+   {
+    "name": "Settignano",
+    "drive": "~5 min",
+    "price": "Few B&Bs, ~€150–250/night (est.)",
+    "lat": 43.784,
+    "lng": 11.319,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "Whole property sleeps up to 40 (3-night minimum). Taxis or shuttles for the hill road.",
+  "appeal": {
+   "score": 5,
+   "why": "Overlooks Florence, and guests can stay in the city itself.",
+   "todo": [
+    "Uffizi and the Duomo",
+    "Oltrarno and Boboli Gardens",
+    "Fiesole",
+    "Chianti day trip",
+    "Pisa or Lucca (~1 hr)"
+   ]
+  },
+  "airportLat": 43.81,
+  "airportLng": 11.2051
  },
  {
   "id": "villa-pizzo",
@@ -989,6 +1311,10 @@
    {
     "t": "Space only: furniture and services extra; exclusive caterers with no published prices",
     "src": null
+   },
+   {
+    "t": "For guests: Cernobbio and Como upscale hotels typically over €350/night in September (est.)",
+    "src": null
    }
   ],
   "questions": [
@@ -1007,7 +1333,53 @@
    "villa-pizzo-7.jpg"
   ],
   "setting": "Lake",
-  "climate": "como"
+  "climate": "como",
+  "lat": 45.851,
+  "lng": 9.079,
+  "privacy": "Exclusive wedding day",
+  "rainPlan": "Indoor space for 100",
+  "curfewShort": "Outdoor music to 11pm",
+  "view": "Lake view",
+  "lodging": [
+   {
+    "name": "Cernobbio",
+    "drive": "~5–10 min",
+    "price": "Several luxury and upscale hotels, ~€350–1,000+/night (est.)",
+    "lat": 45.8417,
+    "lng": 9.0736,
+    "note": ""
+   },
+   {
+    "name": "Como town",
+    "drive": "~15 min",
+    "price": "Many hotels, ~€220–400/night (est.)",
+    "lat": 45.8081,
+    "lng": 9.0852,
+    "note": ""
+   },
+   {
+    "name": "Moltrasio",
+    "drive": "~10 min",
+    "price": "A few hotels, ~€300–600/night (est.)",
+    "lat": 45.86,
+    "lng": 9.095,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "No rooms on site. Shuttles needed on the narrow lakeside road (Via Regina).",
+  "appeal": {
+   "score": 5,
+   "why": "Lake Como.",
+   "todo": [
+    "Bellagio by ferry",
+    "Villa del Balbianello",
+    "Villa Carlotta",
+    "Como–Brunate funicular",
+    "Milan (~1 hr)"
+   ]
+  },
+  "airportLat": 45.6306,
+  "airportLng": 8.7281
  },
  {
   "id": "isola-del-garda",
@@ -1104,6 +1476,10 @@
    {
     "t": "One date only; no rooms; no nonstop to Verona",
     "src": null
+   },
+   {
+    "t": "For guests: Boat-only access adds a transfer each way for every guest",
+    "src": null
    }
   ],
   "questions": [
@@ -1117,7 +1493,53 @@
    "isola-del-garda-3.jpg"
   ],
   "setting": "Lake",
-  "climate": "garda"
+  "climate": "garda",
+  "lat": 45.5783,
+  "lng": 10.5826,
+  "privacy": "Exclusive wedding day",
+  "rainPlan": "Marquee needed",
+  "curfewShort": "Ends ~midnight",
+  "view": "Lake view",
+  "lodging": [
+   {
+    "name": "Salò",
+    "drive": "~10 min by boat",
+    "price": "Many hotels, ~€180–320/night (est.)",
+    "lat": 45.606,
+    "lng": 10.52,
+    "note": ""
+   },
+   {
+    "name": "Gardone Riviera",
+    "drive": "~10 min by boat",
+    "price": "Upscale lakeside hotels, ~€220–450/night (est.)",
+    "lat": 45.621,
+    "lng": 10.562,
+    "note": ""
+   },
+   {
+    "name": "San Felice del Benaco",
+    "drive": "~5 min by boat",
+    "price": "Small hotels, ~€130–220/night (est.)",
+    "lat": 45.585,
+    "lng": 10.55,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "No rooms on the island; every guest needs a private boat transfer each way. Confirm the island closes to daytime tours on your date.",
+  "appeal": {
+   "score": 4,
+   "why": "Lake Garda's west shore is a popular resort area with lots to do, though less internationally famous than Como.",
+   "todo": [
+    "Sirmione and the Grotte di Catullo",
+    "Il Vittoriale (Gardone)",
+    "Valtènesi wineries",
+    "Boat to Limone",
+    "Verona (~1 hr)"
+   ]
+  },
+  "airportLat": 45.3957,
+  "airportLng": 10.8885
  },
  {
   "id": "villa-erba",
@@ -1373,6 +1795,10 @@
    {
     "t": "No legal civil ceremony on site; shares the estate with a congress centre",
     "src": "https://www.italianlakeswedding.com/lakecomo/wedding-villa-erba-cernobbio.html"
+   },
+   {
+    "t": "For guests: Cernobbio and Como upscale hotels typically over €350/night in September (est.)",
+    "src": null
    }
   ],
   "questions": [
@@ -1385,7 +1811,45 @@
    "villa-erba-2.jpg"
   ],
   "setting": "Lake",
-  "climate": "como"
+  "climate": "como",
+  "lat": 45.837,
+  "lng": 9.08,
+  "privacy": "Exclusive wedding day",
+  "rainPlan": "Indoor space for 100",
+  "curfewShort": "Indoor dancing to 4am",
+  "view": "Lake view",
+  "lodging": [
+   {
+    "name": "Cernobbio",
+    "drive": "~5 min",
+    "price": "Luxury and upscale hotels, ~€350–1,000+/night (est.)",
+    "lat": 45.8417,
+    "lng": 9.0736,
+    "note": ""
+   },
+   {
+    "name": "Como town",
+    "drive": "~10 min",
+    "price": "Many hotels, ~€220–400/night (est.)",
+    "lat": 45.8081,
+    "lng": 9.0852,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "No rooms on site. Shares grounds with the Villa Erba exhibition centre, so check for fairs on your date.",
+  "appeal": {
+   "score": 5,
+   "why": "Lake Como.",
+   "todo": [
+    "Bellagio by ferry",
+    "Villa del Balbianello",
+    "Brunate funicular",
+    "Como Duomo and lakefront",
+    "Milan (~1 hr)"
+   ]
+  },
+  "airportLat": 45.6306,
+  "airportLng": 8.7281
  },
  {
   "id": "tenuta-di-artimino",
@@ -1516,7 +1980,53 @@
    "tenuta-di-artimino-2.jpg"
   ],
   "setting": "Countryside",
-  "climate": "carmignano"
+  "climate": "carmignano",
+  "lat": 43.7808,
+  "lng": 11.0627,
+  "privacy": "One wedding a day, shared property",
+  "rainPlan": "Indoor space for 100",
+  "curfewShort": "Curfew unknown",
+  "view": "Countryside",
+  "lodging": [
+   {
+    "name": "On site (Hotel Artimino)",
+    "drive": "0 min",
+    "price": "~60+ rooms, ~€200–350/night (est.)",
+    "lat": 43.7808,
+    "lng": 11.0627,
+    "note": ""
+   },
+   {
+    "name": "Carmignano / Signa",
+    "drive": "~10–15 min",
+    "price": "Agriturismi, ~€100–180/night (est.)",
+    "lat": 43.81,
+    "lng": 11.013,
+    "note": ""
+   },
+   {
+    "name": "Florence",
+    "drive": "~35–40 min",
+    "price": "Hundreds of hotels, ~€250–450/night (est.)",
+    "lat": 43.7696,
+    "lng": 11.2558,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "On-site borgo rooms cut transport needs; overflow guests need shuttles. One-wedding-a-day policy unverified.",
+  "appeal": {
+   "score": 5,
+   "why": "About 35 minutes from Florence, with a UNESCO Medici villa and Carmignano wine on site.",
+   "todo": [
+    "Florence",
+    "Vinci (Leonardo museum)",
+    "Lucca or Pisa (~1 hr)",
+    "Carmignano wineries",
+    "Medici villa visit"
+   ]
+  },
+  "airportLat": 43.81,
+  "airportLng": 11.2051
  },
  {
   "id": "masseria-san-giovanni",
@@ -1653,7 +2163,53 @@
    "masseria-san-giovanni-2.jpg"
   ],
   "setting": "Countryside",
-  "climate": "puglia"
+  "climate": "puglia",
+  "lat": 40.79697,
+  "lng": 17.47599,
+  "privacy": "Multi-day buyout",
+  "rainPlan": "Unconfirmed",
+  "curfewShort": "Curfew unknown",
+  "view": "Countryside",
+  "lodging": [
+   {
+    "name": "Fasano",
+    "drive": "~10 min",
+    "price": "Mid-range hotels and B&Bs, ~€120–200/night (est.)",
+    "lat": 40.836,
+    "lng": 17.3586,
+    "note": ""
+   },
+   {
+    "name": "Savelletri",
+    "drive": "~10 min",
+    "price": "Luxury masserias (Borgo Egnazia), ~€450–1,200/night (est.)",
+    "lat": 40.873,
+    "lng": 17.41,
+    "note": ""
+   },
+   {
+    "name": "Monopoli",
+    "drive": "~25 min",
+    "price": "Many hotels, ~€150–280/night (est.)",
+    "lat": 40.9514,
+    "lng": 17.2988,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "Sleeps about 30 on site. Rental cars or shuttles needed; taxis are scarce.",
+  "appeal": {
+   "score": 4,
+   "why": "Puglia's prime coast and masseria belt, with beaches, trulli towns and great food.",
+   "todo": [
+    "Polignano a Mare",
+    "Alberobello",
+    "Ostuni",
+    "Egnazia ruins and beaches",
+    "Monopoli's old port"
+   ]
+  },
+  "airportLat": 40.6576,
+  "airportLng": 17.947
  },
  {
   "id": "la-foce",
@@ -1782,6 +2338,10 @@
    {
     "t": "Seated dinner tops out around 100 outdoors; VAT not stated",
     "src": "https://www.exclusiveitalyweddings.com/classy-and-elegant-weddings-at-la-foce-tuscany.html"
+   },
+   {
+    "t": "For guests: About 1 hr 45 from Florence airport (Rome is ~2 hr)",
+    "src": null
    }
   ],
   "questions": [
@@ -1794,7 +2354,53 @@
    "la-foce-1.jpg"
   ],
   "setting": "Countryside",
-  "climate": "valdorcia"
+  "climate": "valdorcia",
+  "lat": 43.027,
+  "lng": 11.756,
+  "privacy": "Multi-day buyout",
+  "rainPlan": "Marquee needed",
+  "curfewShort": "Party to 2am",
+  "view": "Countryside",
+  "lodging": [
+   {
+    "name": "Chianciano Terme",
+    "drive": "~15 min",
+    "price": "Many spa hotels, ~€90–160/night (est.)",
+    "lat": 43.06,
+    "lng": 11.828,
+    "note": ""
+   },
+   {
+    "name": "Montepulciano",
+    "drive": "~20 min",
+    "price": "Boutique hotels and B&Bs, ~€150–280/night (est.)",
+    "lat": 43.092,
+    "lng": 11.781,
+    "note": ""
+   },
+   {
+    "name": "Pienza",
+    "drive": "~25 min",
+    "price": "Boutique, ~€180–300/night (est.)",
+    "lat": 43.077,
+    "lng": 11.678,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "Villa and farmhouses sleep 48 (rented weekly). Rental cars needed for everyone else.",
+  "appeal": {
+   "score": 4,
+   "why": "The UNESCO-listed Val d'Orcia is an iconic Tuscan landscape with famous wine towns, but it's about 1 hr 45 from Florence.",
+   "todo": [
+    "Montepulciano wineries",
+    "Pienza",
+    "Bagno Vignoni and San Quirico",
+    "Montalcino (Brunello)",
+    "Cortona"
+   ]
+  },
+  "airportLat": 43.81,
+  "airportLng": 11.2051
  },
  {
   "id": "tenuta-la-madonnina-di-barni",
@@ -1903,6 +2509,10 @@
    {
     "t": "Non-refundable deposit; legal civil ceremony on site unclear",
     "src": "https://www.matrimonio.com/ristoranti-ricevimenti/tenuta-la-madonnina-di-barni--e9580"
+   },
+   {
+    "t": "For guests: Bellagio upscale hotels often over €350/night (est.); about 1 hr 20 from Malpensa",
+    "src": null
    }
   ],
   "questions": [
@@ -1919,7 +2529,53 @@
    "tenuta-la-madonnina-di-barni-3.jpg"
   ],
   "setting": "Lake",
-  "climate": "como"
+  "climate": "como",
+  "lat": 45.9058,
+  "lng": 9.2758,
+  "privacy": "Exclusive wedding day",
+  "rainPlan": "Indoor space for 100",
+  "curfewShort": "Curfew unknown",
+  "view": "Lake view",
+  "lodging": [
+   {
+    "name": "Bellagio",
+    "drive": "~20–25 min",
+    "price": "Many hotels, ~€300–700/night (est.)",
+    "lat": 45.987,
+    "lng": 9.261,
+    "note": ""
+   },
+   {
+    "name": "Asso / Canzo",
+    "drive": "~10 min",
+    "price": "Few small hotels, ~€90–150/night (est.)",
+    "lat": 45.861,
+    "lng": 9.269,
+    "note": ""
+   },
+   {
+    "name": "Erba",
+    "drive": "~20 min",
+    "price": "Mid-range, ~€100–170/night (est.)",
+    "lat": 45.811,
+    "lng": 9.224,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "Sleeps about 20 on site. Rental cars or shuttles needed on mountain roads.",
+  "appeal": {
+   "score": 4,
+   "why": "Close to Lake Como with Bellagio about 20 minutes away; Barni itself is a quiet hill village.",
+   "todo": [
+    "Bellagio",
+    "Villa Melzi and Villa Carlotta",
+    "Madonna del Ghisallo cycling sanctuary",
+    "Como by ferry",
+    "Milan (~1 hr)"
+   ]
+  },
+  "airportLat": 45.6306,
+  "airportLng": 8.7281
  },
  {
   "country": "Spain",
@@ -2019,6 +2675,10 @@
    {
     "t": "No sea view; couple advised shade umbrellas",
     "src": "https://sheerluxe.com/life/weddings/me-my-wedding-a-laid-back-celebration-in-mallorca"
+   },
+   {
+    "t": "Its wedding-venue listing says one event per day, but its catering listing says more than one; confirm exclusivity in writing",
+    "src": "https://www.bodas.net/catering/son-termes--e73962"
    }
   ],
   "questions": [
@@ -2027,7 +2687,53 @@
    "2027 fee and menu prices with VAT?",
    "Coach access and parking?",
    "Exclusive to us that day?"
-  ]
+  ],
+  "lat": 39.6647,
+  "lng": 2.66046,
+  "privacy": "Exclusive wedding day",
+  "rainPlan": "Indoor space for 100",
+  "curfewShort": "Music to 5am",
+  "view": "Countryside",
+  "lodging": [
+   {
+    "name": "Palma",
+    "drive": "~15–20 min",
+    "price": "Huge choice, ~€200–380/night (est.)",
+    "lat": 39.5696,
+    "lng": 2.6502,
+    "note": ""
+   },
+   {
+    "name": "Valldemossa",
+    "drive": "~20 min",
+    "price": "Boutique, ~€200–350/night (est.)",
+    "lat": 39.71,
+    "lng": 2.622,
+    "note": ""
+   },
+   {
+    "name": "Bunyola",
+    "drive": "~10 min",
+    "price": "Few rural hotels, ~€150–250/night (est.)",
+    "lat": 39.696,
+    "lng": 2.699,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "No rooms on site. Shuttles needed.",
+  "appeal": {
+   "score": 5,
+   "why": "Palma, the UNESCO Tramuntana mountains and Mallorca's beaches are all close.",
+   "todo": [
+    "Palma old town and cathedral",
+    "Valldemossa",
+    "Sóller vintage tram",
+    "Deià",
+    "Boat or beach day"
+   ]
+  },
+  "airportLat": 39.5517,
+  "airportLng": 2.7388
  },
  {
   "country": "Spain",
@@ -2129,7 +2835,53 @@
    "Preferred caterers' price ranges?",
    "Air conditioning indoors?",
    "Coach access?"
-  ]
+  ],
+  "lat": 39.70408,
+  "lng": 2.84696,
+  "privacy": "Exclusive wedding day",
+  "rainPlan": "Indoor space for 100",
+  "curfewShort": "Bar licence to 4am",
+  "view": "Countryside",
+  "lodging": [
+   {
+    "name": "Binissalem",
+    "drive": "~5 min",
+    "price": "Few rural hotels, ~€120–220/night (est.)",
+    "lat": 39.687,
+    "lng": 2.843,
+    "note": ""
+   },
+   {
+    "name": "Inca",
+    "drive": "~10 min",
+    "price": "Small hotels, ~€100–180/night (est.)",
+    "lat": 39.721,
+    "lng": 2.911,
+    "note": ""
+   },
+   {
+    "name": "Palma",
+    "drive": "~25–30 min",
+    "price": "Huge choice, ~€200–380/night (est.)",
+    "lat": 39.5696,
+    "lng": 2.6502,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "Couple's suite only on site. Shuttles needed.",
+  "appeal": {
+   "score": 4,
+   "why": "Mallorca's inland wine country, about 30 minutes from Palma with the Tramuntana close by.",
+   "todo": [
+    "Binissalem wineries",
+    "Palma",
+    "Sóller and Fornalutx",
+    "Alcúdia beaches (~35 min)",
+    "Lluc monastery"
+   ]
+  },
+  "airportLat": 39.5517,
+  "airportLng": 2.7388
  },
  {
   "country": "Spain",
@@ -2231,7 +2983,53 @@
    "Partner caterers' per-guest prices for 100?",
    "Can the suites be booked for 2 to 3 nights?",
    "Outdoor music limits?"
-  ]
+  ],
+  "lat": 41.2195,
+  "lng": 1.75025,
+  "privacy": "Exclusive wedding day",
+  "rainPlan": "Indoor space for 100",
+  "curfewShort": "Music to 4am",
+  "view": "Elevated sea view",
+  "lodging": [
+   {
+    "name": "Sitges",
+    "drive": "~10 min",
+    "price": "Many hotels, ~€180–320/night (est.)",
+    "lat": 41.237,
+    "lng": 1.805,
+    "note": ""
+   },
+   {
+    "name": "Vilanova i la Geltrú",
+    "drive": "~5–10 min",
+    "price": "Mid-range, ~€120–200/night (est.)",
+    "lat": 41.224,
+    "lng": 1.725,
+    "note": ""
+   },
+   {
+    "name": "Barcelona",
+    "drive": "~40 min",
+    "price": "Huge choice, ~€250–450/night (est.)",
+    "lat": 41.3874,
+    "lng": 2.1686,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "6 suites on site. Shuttles or taxis; trains connect Sitges with Barcelona airport.",
+  "appeal": {
+   "score": 5,
+   "why": "The Barcelona coast, with Sitges itself a lively beach town.",
+   "todo": [
+    "Sitges old town and beaches",
+    "Barcelona",
+    "Penedès cava wineries",
+    "Montserrat (~1 hr)",
+    "Garraf coast"
+   ]
+  },
+  "airportLat": 41.2971,
+  "airportLng": 2.0785
  },
  {
   "country": "Spain",
@@ -2340,7 +3138,53 @@
    "Where does outdoor music have to stop, and when does it move inside?",
    "Experience with English-speaking couples?",
    "Is the whole headland site private to us that day?"
-  ]
+  ],
+  "lat": 41.6747,
+  "lng": 2.80245,
+  "privacy": "Exclusive wedding day",
+  "rainPlan": "Indoor space for 100",
+  "curfewShort": "Music to 4am",
+  "view": "Elevated sea view",
+  "lodging": [
+   {
+    "name": "Blanes",
+    "drive": "~5 min",
+    "price": "Many beach hotels, ~€120–220/night (est.)",
+    "lat": 41.674,
+    "lng": 2.79,
+    "note": ""
+   },
+   {
+    "name": "Lloret de Mar",
+    "drive": "~10 min",
+    "price": "Many hotels, ~€120–250/night (est.)",
+    "lat": 41.699,
+    "lng": 2.845,
+    "note": ""
+   },
+   {
+    "name": "Tossa de Mar",
+    "drive": "~25 min",
+    "price": "Boutique, ~€150–280/night (est.)",
+    "lat": 41.72,
+    "lng": 2.932,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "No rooms on site, but Blanes town is right below: walk or taxi. Shuttles from Lloret or Tossa.",
+  "appeal": {
+   "score": 4,
+   "why": "Costa Brava with Girona close by and Barcelona about an hour away. The resort towns are more package-holiday than chic.",
+   "todo": [
+    "Marimurtra botanical garden",
+    "Tossa de Mar's walled town",
+    "Girona old town",
+    "Costa Brava coves",
+    "Barcelona (~1 hr)"
+   ]
+  },
+  "airportLat": 41.2971,
+  "airportLng": 2.0785
  },
  {
   "country": "Spain",
@@ -2445,6 +3289,10 @@
    {
     "t": "No rooms on site",
     "src": null
+   },
+   {
+    "t": "For guests: About 1 hr 10 from Barcelona airport",
+    "src": null
    }
   ],
   "questions": [
@@ -2453,7 +3301,53 @@
    "Can the tasting be remote or outside March and April?",
    "Where does music move after midnight?",
    "Full list of required vendors and any commissions?"
-  ]
+  ],
+  "lat": 41.1312,
+  "lng": 1.3625,
+  "privacy": "Exclusive wedding day",
+  "rainPlan": "Indoor space for 100",
+  "curfewShort": "Music to 3am",
+  "view": "Elevated sea view",
+  "lodging": [
+   {
+    "name": "Altafulla",
+    "drive": "~5–10 min",
+    "price": "Small hotels and apartments, ~€120–220/night (est.)",
+    "lat": 41.142,
+    "lng": 1.377,
+    "note": ""
+   },
+   {
+    "name": "Tarragona",
+    "drive": "~15 min",
+    "price": "City hotels, ~€110–200/night (est.)",
+    "lat": 41.1189,
+    "lng": 1.2445,
+    "note": ""
+   },
+   {
+    "name": "Salou",
+    "drive": "~30 min",
+    "price": "Many resort hotels, ~€120–220/night (est.)",
+    "lat": 41.077,
+    "lng": 1.141,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "No rooms on site. Shuttles needed.",
+  "appeal": {
+   "score": 3,
+   "why": "Costa Daurada next to Roman Tarragona. Barcelona is about 1 hr 10; pleasant rather than famous.",
+   "todo": [
+    "Tarragona's Roman ruins (UNESCO)",
+    "Altafulla old village",
+    "Priorat wineries (~1 hr)",
+    "PortAventura (~30 min)",
+    "Beaches"
+   ]
+  },
+  "airportLat": 41.2971,
+  "airportLng": 2.0785
  },
  {
   "country": "Spain",
@@ -2563,7 +3457,53 @@
    "Where does outdoor music have to stop?",
    "Can we bring our own photographer and caterer?",
    "Is VAT included in the per-guest price?"
-  ]
+  ],
+  "lat": 41.4994,
+  "lng": 2.34633,
+  "privacy": "Exclusive wedding day",
+  "rainPlan": "Indoor space for 100",
+  "curfewShort": "Music to 4am",
+  "view": "Sea view",
+  "lodging": [
+   {
+    "name": "Barcelona",
+    "drive": "~25–30 min",
+    "price": "Huge choice, ~€250–450/night (est.)",
+    "lat": 41.3874,
+    "lng": 2.1686,
+    "note": ""
+   },
+   {
+    "name": "Premià de Mar / El Masnou",
+    "drive": "~10 min",
+    "price": "Few hotels, ~€120–200/night (est.)",
+    "lat": 41.492,
+    "lng": 2.36,
+    "note": ""
+   },
+   {
+    "name": "Mataró",
+    "drive": "~15 min",
+    "price": "Mid-range, ~€110–180/night (est.)",
+    "lat": 41.54,
+    "lng": 2.444,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "No rooms on site. Shuttles needed; a commuter train runs along the coast.",
+  "appeal": {
+   "score": 5,
+   "why": "Barcelona is about 25 minutes away.",
+   "todo": [
+    "Barcelona (Sagrada Família, Gothic Quarter)",
+    "Maresme beaches",
+    "Alella wineries",
+    "Montserrat (~1 hr)",
+    "Girona (~1 hr)"
+   ]
+  },
+  "airportLat": 41.2971,
+  "airportLng": 2.0785
  },
  {
   "country": "Spain",
@@ -2666,6 +3606,10 @@
    {
     "t": "Furthest from the airport of the Mallorca options (~1 hr)",
     "src": "https://hdmoments.co.uk/can-simoneta-hotel-mallorca"
+   },
+   {
+    "t": "For guests: About 1 hr from Palma airport; adults-only hotel",
+    "src": null
    }
   ],
   "questions": [
@@ -2674,7 +3618,53 @@
    "Outdoor and indoor music cutoffs?",
    "Are children allowed under a full buyout?",
    "Is catering in-house, and per-guest price?"
-  ]
+  ],
+  "lat": 39.65195,
+  "lng": 3.43766,
+  "privacy": "Multi-day buyout",
+  "rainPlan": "Unconfirmed",
+  "curfewShort": "Curfew unknown",
+  "view": "Elevated sea view",
+  "lodging": [
+   {
+    "name": "Canyamel",
+    "drive": "~5 min",
+    "price": "A few hotels, ~€180–300/night (est.)",
+    "lat": 39.662,
+    "lng": 3.431,
+    "note": ""
+   },
+   {
+    "name": "Cala Ratjada",
+    "drive": "~15 min",
+    "price": "Many resort hotels, ~€150–280/night (est.)",
+    "lat": 39.712,
+    "lng": 3.463,
+    "note": ""
+   },
+   {
+    "name": "Artà",
+    "drive": "~15 min",
+    "price": "Boutique, ~€150–250/night (est.)",
+    "lat": 39.694,
+    "lng": 3.35,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "Buyout covers ~27 rooms (about half the guests). Rental cars or shuttles for the rest.",
+  "appeal": {
+   "score": 3,
+   "why": "Mallorca's quieter east coast with beaches and coves, about an hour from Palma.",
+   "todo": [
+    "Coves d'Artà caves",
+    "Capdepera castle",
+    "Cala Agulla and Cala Mesquida beaches",
+    "Artà town",
+    "Palma (~1 hr)"
+   ]
+  },
+  "airportLat": 39.5517,
+  "airportLng": 2.7388
  },
  {
   "country": "Spain",
@@ -2779,6 +3769,10 @@
    {
     "t": "Winding Tramuntana road for coaches",
     "src": null
+   },
+   {
+    "t": "For guests: Deià hotels typically over €350/night in September (est.); Valldemossa and Sóller are cheaper",
+    "src": null
    }
   ],
   "questions": [
@@ -2787,6 +3781,360 @@
    "2027 buyout price and minimum nights?",
    "Outdoor music cutoff on the wedding night?",
    "Catering: in-house menu and per-guest price?"
-  ]
+  ],
+  "lat": 39.75556,
+  "lng": 2.63633,
+  "privacy": "Multi-day buyout",
+  "rainPlan": "Marquee needed",
+  "curfewShort": "Curfew unknown",
+  "view": "Elevated sea view",
+  "lodging": [
+   {
+    "name": "Deià",
+    "drive": "~5 min",
+    "price": "A few luxury hotels and B&Bs, ~€350–1,000+/night (est.)",
+    "lat": 39.748,
+    "lng": 2.648,
+    "note": ""
+   },
+   {
+    "name": "Valldemossa",
+    "drive": "~15 min",
+    "price": "Boutique, ~€200–350/night (est.)",
+    "lat": 39.71,
+    "lng": 2.622,
+    "note": ""
+   },
+   {
+    "name": "Sóller / Port de Sóller",
+    "drive": "~25 min",
+    "price": "Many hotels, ~€180–320/night (est.)",
+    "lat": 39.766,
+    "lng": 2.715,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "Buyout covers 14 rooms. Shuttles needed on the winding coast road.",
+  "appeal": {
+   "score": 5,
+   "why": "Deià and the Tramuntana coast are among Mallorca's most famous spots, with Palma 35–40 minutes away.",
+   "todo": [
+    "Deià village and Cala Deià",
+    "Valldemossa",
+    "Sóller and the vintage tram",
+    "Tramuntana hikes",
+    "Palma"
+   ]
+  },
+  "airportLat": 39.5517,
+  "airportLng": 2.7388
+ },
+ {
+  "source": "Our research",
+  "status": "New",
+  "nightsEst": false,
+  "couplePaysRooms": false,
+  "nights": 0,
+  "minGuests": null,
+  "extras": [],
+  "windows": [],
+  "photos": [
+   "fortaleza-do-guincho-1.jpg",
+   "fortaleza-do-guincho-2.jpg"
+  ],
+  "id": "fortaleza-do-guincho",
+  "name": "Fortaleza do Guincho",
+  "country": "Portugal",
+  "region": "Lisbon coast",
+  "area": "Guincho, Cascais",
+  "type": "Hotel",
+  "setting": "Sea / coast",
+  "model": "Hotel package",
+  "climate": "lisbon",
+  "about": "A Relais & Châteaux hotel inside an 18th-century fort on the clifftop above Guincho beach, west of Cascais. One wedding per day, 27 rooms on site. About 35 minutes from Lisbon airport, which has nonstops from New York all year. 100 guests is right at its limit.",
+  "elena": {
+   "Venue fee": "None; no space-only rental",
+   "Menu": "€155 to €175 per guest",
+   "Capacity": "25 to 100 (Relais & Châteaux lists 90 max)",
+   "Rain plan": "Indoor banquet salons; whether all 100 fit seated is unconfirmed",
+   "Exclusive": "One wedding per day",
+   "Rooms": "27 rooms, ~$205 to $364/night; guests pay",
+   "Party ends": "Midnight"
+  },
+  "beds": 54,
+  "rooms": 27,
+  "roomsNote": "27 hotel rooms; guests book and pay their own (~$205 to $364/night)",
+  "planB": null,
+  "maxGuests": 100,
+  "caterer": "Internal",
+  "fee": {
+   "amount": 0,
+   "vat": "unknown",
+   "confirmed": true,
+   "scenario": "No venue fee or space-only rental; priced per guest (Casamentos.pt)."
+  },
+  "overrides": {
+   "cateringPerGuest": {
+    "value": 165,
+    "note": "Menus €155 to €175 per guest (Casamentos.pt); midpoint",
+    "confirmed": false
+   },
+   "rentals": {
+    "value": 1500,
+    "note": "Hotel supplies tables, chairs and linens",
+    "confirmed": false
+   }
+  },
+  "airport": "Lisbon (LIS)",
+  "airportKm": "~35",
+  "drive": "~35 min",
+  "altAirport": "",
+  "flight": "Nonstop: Lisbon from JFK and Newark year-round (TAP, United, Delta). About 7 hours.",
+  "nonstop": true,
+  "reviews": "Casamentos.pt 5.0/5 (5). Relais & Châteaux property.",
+  "contactInfo": "Enquiry form on Casamentos.pt",
+  "links": {
+   "Website": "https://www.relaischateaux.com/us/hotel/fortaleza-do-guincho/",
+   "Map": "https://www.google.com/maps/search/?api=1&query=Fortaleza+do+Guincho",
+   "Contact": "https://www.casamentos.pt/hotel-casamento/hotel-fortaleza-do-guincho--e50376"
+  },
+  "pros": [
+   {
+    "t": "Clifftop fort directly above the Atlantic",
+    "src": "https://www.relaischateaux.com/us/hotel/fortaleza-do-guincho/"
+   },
+   {
+    "t": "One wedding per day",
+    "src": "https://www.casamentos.pt/hotel-casamento/hotel-fortaleza-do-guincho--e50376"
+   },
+   {
+    "t": "Reasonable per-guest menus (€155 to €175) with no venue fee",
+    "src": "https://www.casamentos.pt/hotel-casamento/hotel-fortaleza-do-guincho--e50376"
+   },
+   {
+    "t": "27 rooms on site; Cascais and Sintra close by",
+    "src": null
+   }
+  ],
+  "cons": [
+   {
+    "t": "100 guests is at or over its limit (Relais & Châteaux lists 90)",
+    "src": "https://www.relaischateaux.com/us/hotel/fortaleza-do-guincho/"
+   },
+   {
+    "t": "Celebrations end at midnight",
+    "src": "https://www.casamentos.pt/hotel-casamento/hotel-fortaleza-do-guincho--e50376"
+   },
+   {
+    "t": "No step-free access",
+    "src": "https://www.casamentos.pt/hotel-casamento/hotel-fortaleza-do-guincho--e50376"
+   },
+   {
+    "t": "Guincho is a famously windy beach",
+    "src": null
+   },
+   {
+    "t": "Lisbon coast gets about 10 rainy days in October; September is safer",
+    "src": "https://weatherandclimate.com/portugal/lisboa/cascais"
+   }
+  ],
+  "questions": [
+   "What is the indoor seated maximum if it rains?",
+   "Can we buy out all 27 rooms, and what is the minimum?",
+   "Can a marquee go in the courtyard?",
+   "Can the party continue indoors after midnight?",
+   "2027 menu prices with VAT?"
+  ],
+  "lat": 38.73,
+  "lng": -9.474,
+  "airportLat": 38.7742,
+  "airportLng": -9.1342,
+  "privacy": "One wedding a day, shared property",
+  "rainPlan": "Unconfirmed",
+  "curfewShort": "Ends at midnight",
+  "view": "Elevated sea view",
+  "lodging": [
+   {
+    "name": "Cascais",
+    "drive": "~10 min",
+    "price": "Many hotels, ~€180–350/night (est.)",
+    "lat": 38.6979,
+    "lng": -9.4215,
+    "note": ""
+   },
+   {
+    "name": "Estoril",
+    "drive": "~15 min",
+    "price": "Many hotels, ~€150–300/night (est.)",
+    "lat": 38.7057,
+    "lng": -9.3977,
+    "note": ""
+   },
+   {
+    "name": "Sintra",
+    "drive": "~25 min",
+    "price": "Boutique hotels and guesthouses, ~€150–300/night (est.)",
+    "lat": 38.8029,
+    "lng": -9.3817,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "27 rooms on site cover about half the guests. Shuttles or taxis from Cascais.",
+  "appeal": {
+   "score": 5,
+   "why": "Cascais is 10 minutes away, Sintra's palaces 25, and Lisbon about 40. A destination people visit anyway.",
+   "todo": [
+    "Sintra palaces (Pena, Quinta da Regaleira)",
+    "Cabo da Roca, Europe's westernmost point",
+    "Cascais old town and beaches",
+    "Lisbon (~40 min)",
+    "Guincho beach"
+   ]
+  }
+ },
+ {
+  "source": "Our research",
+  "status": "New",
+  "nightsEst": false,
+  "couplePaysRooms": false,
+  "nights": 0,
+  "minGuests": null,
+  "extras": [],
+  "windows": [],
+  "photos": [
+   "villa-dalmacija-1.jpg",
+   "villa-dalmacija-2.jpg"
+  ],
+  "id": "villa-dalmacija",
+  "name": "Villa Dalmacija",
+  "country": "Croatia",
+  "region": "Split",
+  "area": "Marjan hill, Split",
+  "type": "Villa",
+  "setting": "Sea / coast",
+  "model": "Daily rental",
+  "about": "Tito's former residence on the forested slopes of Marjan hill in Split, with a sea-view terrace, private beach and dock. Can be booked privately in full, with indoor rooms for 130 if it rains. About 30 minutes from Split airport.",
+  "elena": {
+   "Venue fee": "€7,125 (published by two Croatian planners)",
+   "Menu": "Food and drink from €120, average ~€180 per guest",
+   "Capacity": "120 to 150 outdoors",
+   "Rain plan": "Indoor fireplace and library rooms seat 130",
+   "Exclusive": "Can be privately booked in full",
+   "Rooms": "None; guests stay in Split",
+   "Party ends": "2am (one planner says 3am)"
+  },
+  "beds": 0,
+  "rooms": 0,
+  "roomsNote": "No rooms; guests stay in Split (5 min)",
+  "planB": 130,
+  "maxGuests": 150,
+  "caterer": "Ask",
+  "fee": {
+   "amount": 7125,
+   "vat": "unknown",
+   "confirmed": false,
+   "scenario": "Venue fee €7,125 as published by Promessi and Yes I Du; confirm for 2027."
+  },
+  "overrides": {
+   "cateringPerGuest": {
+    "value": 180,
+    "note": "From €120, average ~€180 per guest (Promessi)",
+    "confirmed": false
+   }
+  },
+  "airport": "Split (SPU)",
+  "airportKm": "~25",
+  "drive": "30 to 35 min (est.)",
+  "altAirport": "Dubrovnik (DBV), daily United nonstop, ~3 hr drive",
+  "flight": "Nonstop: United Newark to Split, 3x weekly (Tue, Thu, Sat), returns May 4, 2027. The 2026 season ended Sep 5, so a mid-September or October date likely means one connection.",
+  "nonstop": true,
+  "reviews": "A Washington DC couple's wedding was featured on 100 Layer Cake. No review counts found.",
+  "contactInfo": "Book through a planner (Promessi or Yes I Du: info@yes-i-du.net, +385 99 702 7381)",
+  "links": {
+   "Venue page": "https://promessi.com.hr/villa-dalmacija/",
+   "Map": "https://www.google.com/maps/search/?api=1&query=Villa+Dalmacija+Split",
+   "Contact": "https://yes-i-du.net/villa-dalmacija/"
+  },
+  "pros": [
+   {
+    "t": "Can be privately booked in full",
+    "src": "https://yes-i-du.net/villa-dalmacija/"
+   },
+   {
+    "t": "Real indoor backup: rooms seat 130",
+    "src": "https://promessi.com.hr/villa-dalmacija/"
+   },
+   {
+    "t": "Low venue fee (€7,125) and music to 2am",
+    "src": "https://yes-i-du.net/villa-dalmacija/"
+   },
+   {
+    "t": "Private beach and dock; walk-in distance to Split's old town",
+    "src": "https://wedourway.com/venue/villa-dalmacija/"
+   }
+  ],
+  "cons": [
+   {
+    "t": "On a hillside, not a cliff edge",
+    "src": null
+   },
+   {
+    "t": "For guests: Split nonstop is only 3x weekly and seasonal; later dates need a connection",
+    "src": "https://www.visit-croatia.co.uk/getting-to-croatia/north-america-to-croatia-flights/"
+   },
+   {
+    "t": "Capacity figures vary between sources (120 to 150)",
+    "src": "https://promessi.com.hr/villa-dalmacija/"
+   },
+   {
+    "t": "No rooms on site",
+    "src": null
+   }
+  ],
+  "questions": [
+   "Is the 2027 fee still €7,125, and is VAT included?",
+   "Must we use a specific caterer?",
+   "Can guests arrive by boat?",
+   "Seated capacity indoors for 100 with a dance floor?",
+   "Any music limits on the terrace?"
+  ],
+  "lat": 43.5075,
+  "lng": 16.4245,
+  "airportLat": 43.5389,
+  "airportLng": 16.298,
+  "privacy": "Exclusive wedding day",
+  "rainPlan": "Indoor space for 100",
+  "curfewShort": "Music to 2am",
+  "view": "Sea view",
+  "lodging": [
+   {
+    "name": "Split old town",
+    "drive": "~5 min",
+    "price": "Many hotels, ~€200–400/night in peak season (est.)",
+    "lat": 43.5081,
+    "lng": 16.4402,
+    "note": ""
+   },
+   {
+    "name": "Trogir",
+    "drive": "~35 min",
+    "price": "Boutique hotels, ~€150–300/night (est.)",
+    "lat": 43.5167,
+    "lng": 16.2511,
+    "note": ""
+   }
+  ],
+  "lodgingNote": "No rooms on site, but Split's old town is minutes away. Shuttles or taxis.",
+  "appeal": {
+   "score": 5,
+   "why": "Split is a major destination: Diocletian's Palace, island-hopping to Hvar and Brač, and Krka's waterfalls.",
+   "todo": [
+    "Diocletian's Palace (UNESCO)",
+    "Boat day to Hvar or Brač",
+    "Krka National Park waterfalls",
+    "Trogir old town",
+    "Marjan hill hikes"
+   ]
+  }
  }
 ]

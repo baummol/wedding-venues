@@ -13,12 +13,26 @@
   "vat": 0.22
  },
  "todos": [
-  "Connect the Google Sheet so ratings and this to-do list save for everyone",
-  "Send Elena our shortlist and feedback",
-  "Send the non-Italy venues (Portugal, Spain, Greece) to add to the site",
-  "Research our own venues in Portugal, Spain and Greece",
-  "Find planners for Portugal, Spain and Greece (Elena covers Italy)",
-  "Collect photos for venues marked 'Find photos'"
+  [
+   "gen-0",
+   "Connect the Google Sheet so ratings and this to-do list save for everyone"
+  ],
+  [
+   "gen-1",
+   "Send Elena our shortlist and feedback"
+  ],
+  [
+   "gen-6",
+   "Update the Google Sheet script so comments work (steps from Claude)"
+  ],
+  [
+   "gen-7",
+   "For Spain, Portugal and Croatia: decide whether to email each venue directly or use a regional planner"
+  ],
+  [
+   "gen-5",
+   "Collect photos for venues marked 'Find photos'"
+  ]
  ],
  "countryCosts": {
   "Italy": {
@@ -57,6 +71,18 @@
    "transport": 2500,
    "welcomeDinner": 4500
   },
+  "Croatia": {
+   "cateringPerGuest": 130,
+   "rentals": 3000,
+   "flowers": 5000,
+   "planner": 6000,
+   "photoVideo": 5500,
+   "music": 3500,
+   "ceremony": 1000,
+   "hairMakeup": 800,
+   "transport": 2500,
+   "welcomeDinner": 4500
+  },
   "Greece": {
    "cateringPerGuest": 130,
    "rentals": 3000,
@@ -69,6 +95,12 @@
    "transport": 2500,
    "welcomeDinner": 4500
   }
+ },
+ "countryNotes": {
+  "Italy": "Through Elena, our Italy planner.",
+  "Spain": "No planner yet: email each venue for 2027 availability, or use a regional planner (Mille Papillons for Mallorca; Studio Design Events for Barcelona and Costa Brava).",
+  "Portugal": "No planner yet: email the venue directly, or a regional planner (Something New Weddings for Lisbon and Cascais).",
+  "Croatia": "No planner yet: email the venue directly, or a regional planner (Yes I Du covers all of Croatia and publishes venue prices)."
  },
  "costSources": [
   [

@@ -1,5 +1,5 @@
 /** @OnlyCurrentDoc */
-// Backend for Molly & Zack's Venues: stores ratings and ticked-off to-dos.
+// Backend for Molly & Zack's Venues: stores ratings, comments and ticked-off to-dos.
 // Paste this whole file into Extensions > Apps Script in your Google Sheet, then deploy as a web app.
 
 function tab_(name, header) {
@@ -10,6 +10,7 @@ function tab_(name, header) {
 }
 const ratings_ = () => tab_("Ratings", ["venue", "name", "stars", "comment", "updated"]);
 const todos_ = () => tab_("Todos", ["id", "done", "updated"]);
+const comments_ = () => tab_("Comments", ["venue", "name", "text", "created"]);
 
 function json_(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
@@ -22,10 +23,13 @@ function doGet() {
     .map(r => ({ venue: r[0], name: r[1], stars: Number(r[2]), comment: r[3] || "" }));
   const done = todos_().getDataRange().getValues().slice(1)
     .filter(r => r[0] && r[1] === true).map(r => String(r[0]));
-  return json_({ ratings: ratings, done: done });
+  const comments = comments_().getDataRange().getValues().slice(1)
+    .filter(r => r[0] && r[1] && r[2])
+    .map(r => ({ venue: r[0], name: r[1], text: r[2], created: r[3] ? new Date(r[3]).toISOString() : "" }));
+  return json_({ ratings: ratings, done: done, comments: comments });
 }
 
-// POST: save one rating (replacing that person's earlier one), or tick/untick one to-do
+// POST: save one rating (replacing that person's earlier one), add one comment, or tick/untick one to-do
 function doPost(e) {
   const lock = LockService.getScriptLock();
   lock.waitLock(10000);
@@ -39,6 +43,12 @@ function doPost(e) {
         if (String(values[i][0]) === id) { sh.getRange(i + 1, 1, 1, 3).setValues([[id, !!d.done, new Date()]]); return json_({ ok: true }); }
       }
       sh.appendRow([id, !!d.done, new Date()]);
+      return json_({ ok: true });
+    }
+    if (d.kind === "comment") {
+      const cv = String(d.venue || "").slice(0, 80), cn = String(d.name || "").trim().slice(0, 40), ct = String(d.text || "").trim().slice(0, 1000);
+      if (!cv || !cn || !ct) return json_({ ok: false, error: "missing venue, name or text" });
+      comments_().appendRow([cv, cn, ct, new Date()]);
       return json_({ ok: true });
     }
     const venue = String(d.venue || "").slice(0, 80);

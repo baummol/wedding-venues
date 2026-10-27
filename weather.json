@@ -1,0 +1,1038 @@
+{
+ "palma": {
+  "station": "Mallorca - Palma",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 86,
+    "lowF": 66,
+    "humidity": "52%",
+    "rainDays": 1,
+    "rainMm": 8
+   },
+   "08": {
+    "highF": 86,
+    "lowF": 67,
+    "humidity": "64%",
+    "rainDays": 2,
+    "rainMm": 15
+   },
+   "09": {
+    "highF": 81,
+    "lowF": 63,
+    "humidity": "42%",
+    "rainDays": 6,
+    "rainMm": 41
+   },
+   "10": {
+    "highF": 74,
+    "lowF": 56,
+    "humidity": "15%",
+    "rainDays": 7,
+    "rainMm": 53
+   }
+  },
+  "src": "https://weatherspark.com/y/47114/Average-Weather-in-Palma-Spain-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), same as Italy. Watch for pickpockets in Barcelona and Palma, summer heat waves and wildfires.",
+  "note": "Jul: Driest, calm month; sea 76F; AEMET airport normals hotter (max 88F, RH 62%). 2026 Balearics had record heat-wave days. Aug: Muggiest month (2 of 3 days); sea 79F; AEMET 1.8 thunderstorm days, late-summer storms begin. Sep: Storm season starts: AEMET 3.9 thunderstorm days, 50 mm; DANA/gota fria downpours possible; sea 76F. Oct: Wettest of the four (AEMET 62 mm, 6 days >=1 mm); pleasant temps, sea 72F."
+ },
+ "tramuntana": {
+  "station": "Mallorca - NW Tramuntana (Deia; Port de Soller similar)",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 82,
+    "lowF": 62,
+    "humidity": "47%",
+    "rainDays": 2,
+    "rainMm": 10
+   },
+   "08": {
+    "highF": 82,
+    "lowF": 63,
+    "humidity": "59%",
+    "rainDays": 4,
+    "rainMm": 20
+   },
+   "09": {
+    "highF": 77,
+    "lowF": 59,
+    "humidity": "37%",
+    "rainDays": 6,
+    "rainMm": 46
+   },
+   "10": {
+    "highF": 70,
+    "lowF": 53,
+    "humidity": "11%",
+    "rainDays": 7,
+    "rainMm": 56
+   }
+  },
+  "src": "https://weatherspark.com/y/47128/Average-Weather-in-Dei%C3%A0-Spain-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), same as Italy. Watch for pickpockets in Barcelona and Palma, summer heat waves and wildfires.",
+  "note": "Jul: ~4F cooler than Palma; sea 76F; mountain wildfire risk in Serra de Tramuntana. Aug: Muggy most days; sea 79F; afternoon mountain thunderstorms possible. Port de Soller: 85/67F, 20 muggy days. Sep: Rain days rise (6+); sea 76F; heavy autumn storms hit mountains first. Oct: Windier from early Oct, westerly shift late month; Port de Soller 7.4 wet days."
+ },
+ "costabrava": {
+  "station": "Costa Brava (Palafrugell)",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 81,
+    "lowF": 65,
+    "humidity": "40%",
+    "rainDays": 3,
+    "rainMm": 23
+   },
+   "08": {
+    "highF": 81,
+    "lowF": 66,
+    "humidity": "49%",
+    "rainDays": 4,
+    "rainMm": 28
+   },
+   "09": {
+    "highF": 76,
+    "lowF": 61,
+    "humidity": "30%",
+    "rainDays": 5,
+    "rainMm": 48
+   },
+   "10": {
+    "highF": 69,
+    "lowF": 55,
+    "humidity": "10%",
+    "rainDays": 6,
+    "rainMm": 74
+   }
+  },
+  "src": "https://weatherspark.com/y/48964/Average-Weather-in-Palafrugell-Spain-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), same as Italy. Watch for pickpockets in Barcelona and Palma, summer heat waves and wildfires.",
+  "note": "Jul: Mild highs; some convective storms; sea warm (>70F early Jul-late Sep). Aug: Peak mugginess; sea 73F; 2026 Les Gavarres fire (~2,200 ha) was right behind this coast. Sep: Tramontana (north wind) episodes; sea still >70F to ~Sep 24. Oct: Wettest month here (~74 mm); windier season from ~Oct 18; autumn torrential rain risk on Catalan coast."
+ },
+ "barcelona": {
+  "station": "Barcelona",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 82,
+    "lowF": 68,
+    "humidity": "50%",
+    "rainDays": 3,
+    "rainMm": 20
+   },
+   "08": {
+    "highF": 82,
+    "lowF": 68,
+    "humidity": "56%",
+    "rainDays": 4,
+    "rainMm": 30
+   },
+   "09": {
+    "highF": 78,
+    "lowF": 63,
+    "humidity": "31%",
+    "rainDays": 6,
+    "rainMm": 48
+   },
+   "10": {
+    "highF": 71,
+    "lowF": 56,
+    "humidity": "7%",
+    "rainDays": 6,
+    "rainMm": 61
+   }
+  },
+  "src": "https://weatherspark.com/y/47213/Average-Weather-in-Barcelona-Spain-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), same as Italy. Watch for pickpockets in Barcelona and Palma, summer heat waves and wildfires.",
+  "note": "Jul: Warm nights (low 68F) and humid sea breeze; sea 75F. Aug: Muggiest; sea 77F; tropical nights common. Sep: Late-summer storms; sea 75F; Sept is historically one of the wetter months on the coast. Oct: Comfortable; most rain of the four; sea 69F."
+ },
+ "penedes": {
+  "station": "Penedes (Vilafranca)",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 82,
+    "lowF": 65,
+    "humidity": "35%",
+    "rainDays": 2,
+    "rainMm": 15
+   },
+   "08": {
+    "highF": 82,
+    "lowF": 66,
+    "humidity": "45%",
+    "rainDays": 4,
+    "rainMm": 25
+   },
+   "09": {
+    "highF": 77,
+    "lowF": 60,
+    "humidity": "21%",
+    "rainDays": 6,
+    "rainMm": 43
+   },
+   "10": {
+    "highF": 70,
+    "lowF": 53,
+    "humidity": "3%",
+    "rainDays": 6,
+    "rainMm": 51
+   }
+  },
+  "src": "https://weatherspark.com/y/45938/Average-Weather-in-Vilafranca-del-Pened%C3%A8s-Spain-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), same as Italy. Watch for pickpockets in Barcelona and Palma, summer heat waves and wildfires.",
+  "note": "Jul: Inland of coastal range: less muggy than Barcelona; Weather Spark model may understate inland peaks. Aug: Calmest month; harvest begins late Aug; storms possible. Sep: Grape-harvest season; noticeably drier air than coast. Oct: Near zero muggy days; cool evenings (53F)."
+ },
+ "toledo": {
+  "station": "Toledo",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 92,
+    "lowF": 65,
+    "humidity": "0%",
+    "rainDays": 1,
+    "rainMm": 5
+   },
+   "08": {
+    "highF": 91,
+    "lowF": 65,
+    "humidity": "0%",
+    "rainDays": 1,
+    "rainMm": 5
+   },
+   "09": {
+    "highF": 82,
+    "lowF": 58,
+    "humidity": "0%",
+    "rainDays": 3,
+    "rainMm": 15
+   },
+   "10": {
+    "highF": 70,
+    "lowF": 50,
+    "humidity": "0%",
+    "rainDays": 6,
+    "rainMm": 41
+   }
+  },
+  "src": "https://weatherspark.com/y/35355/Average-Weather-in-Toledo-Spain-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), same as Italy. Watch for pickpockets in Barcelona and Palma, summer heat waves and wildfires.",
+  "note": "Jul: Very hot, dry heat; frequent 100F+ days in heat waves; 2026 Burgohondo/Villa del Prado fire (~50,000 ha) touched Madrid/Avila/Toledo. Aug: As July; heat waves (AEMET 2026: Jul 28-Aug 20 wave). Avoid. Sep: Still warm (82F) but dry; nights cool to 58F. Oct: Pleasant days, chilly nights (50F); rain rises."
+ },
+ "malaga": {
+  "station": "Malaga coast",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 86,
+    "lowF": 69,
+    "humidity": "32%",
+    "rainDays": 0,
+    "rainMm": 0
+   },
+   "08": {
+    "highF": 87,
+    "lowF": 70,
+    "humidity": "45%",
+    "rainDays": 0,
+    "rainMm": 3
+   },
+   "09": {
+    "highF": 82,
+    "lowF": 66,
+    "humidity": "29%",
+    "rainDays": 2,
+    "rainMm": 15
+   },
+   "10": {
+    "highF": 74,
+    "lowF": 59,
+    "humidity": "5%",
+    "rainDays": 5,
+    "rainMm": 46
+   }
+  },
+  "src": "https://weatherspark.com/y/35192/Average-Weather-in-M%C3%A1laga-Spain-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), same as Italy. Watch for pickpockets in Barcelona and Palma, summer heat waves and wildfires.",
+  "note": "Jul: Essentially rainless; terral (hot offshore wind) can push 100F+; sea ~71F (Alboran). Aug: Hottest, muggiest; terral risk; sea ~73F. Sep: Still dry; sea ~71F. Oct: First autumn rains; occasional DANA downpours; sea ~68F."
+ },
+ "ronda": {
+  "station": "Ronda",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 84,
+    "lowF": 59,
+    "humidity": "Moderate",
+    "rainDays": 3,
+    "rainMm": 13
+   },
+   "08": {
+    "highF": 84,
+    "lowF": 59,
+    "humidity": "Moderate",
+    "rainDays": 3,
+    "rainMm": 13
+   },
+   "09": {
+    "highF": 77,
+    "lowF": 57,
+    "humidity": "Low",
+    "rainDays": 5,
+    "rainMm": 32
+   },
+   "10": {
+    "highF": 66,
+    "lowF": 50,
+    "humidity": "None",
+    "rainDays": 10,
+    "rainMm": 79
+   }
+  },
+  "src": "https://weather2travel.com/costa-del-sol/ronda/august/",
+  "safety": "US advisory Level 2 (exercise increased caution), same as Italy. Watch for pickpockets in Barcelona and Palma, summer heat waves and wildfires.",
+  "note": "Jul: Altitude ~740 m: cooler nights. LOWER CONFIDENCE: CRU-based highs; other sources show ~86-90F (estimate) in Jul/Aug; Weather Spark has no Ronda page. Aug: Dry heat; inland Andalusia had record fires in 2026 (Niebla, Huelva). Sep: Comfortable days; cool nights. Oct: Rain rises sharply (~10 days); cool evenings."
+ },
+ "lisbon": {
+  "station": "Lisbon / Sintra / Cascais (Lisbon city figures)",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 82,
+    "lowF": 65,
+    "humidity": "10%",
+    "rainDays": 0,
+    "rainMm": 3
+   },
+   "08": {
+    "highF": 83,
+    "lowF": 65,
+    "humidity": "15%",
+    "rainDays": 1,
+    "rainMm": 3
+   },
+   "09": {
+    "highF": 79,
+    "lowF": 63,
+    "humidity": "14%",
+    "rainDays": 3,
+    "rainMm": 20
+   },
+   "10": {
+    "highF": 72,
+    "lowF": 59,
+    "humidity": "9%",
+    "rainDays": 7,
+    "rainMm": 61
+   }
+  },
+  "src": "https://weatherspark.com/y/32022/Average-Weather-in-Lisbon-Portugal-Year-Round",
+  "safety": "US advisory Level 1 (normal precautions). Petty theft in central Lisbon; summer heat and wildfire season inland.",
+  "note": "Jul: Steady north wind (Nortada), low humidity; Atlantic sea only 65F. Cascais 78/66F; Sintra 77/64F with summer fog/mist. Aug: Dry; heat-wave spikes to 95-100F possible in Lisbon; Cascais/Sintra 5-10F cooler. Sep: Calmest month; great conditions; Cascais 77/65F, 6.3 muggy days. Oct: Rainy season begins (~7 wet days); Sintra hills wetter and foggier."
+ },
+ "comporta": {
+  "station": "Comporta / Alentejo coast (Sines coastal proxy)",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 80,
+    "lowF": 64,
+    "humidity": "12%",
+    "rainDays": 0,
+    "rainMm": 0
+   },
+   "08": {
+    "highF": 80,
+    "lowF": 65,
+    "humidity": "19%",
+    "rainDays": 1,
+    "rainMm": 3
+   },
+   "09": {
+    "highF": 78,
+    "lowF": 63,
+    "humidity": "16%",
+    "rainDays": 3,
+    "rainMm": 18
+   },
+   "10": {
+    "highF": 72,
+    "lowF": 60,
+    "humidity": "7%",
+    "rainDays": 7,
+    "rainMm": 58
+   }
+  },
+  "src": "https://weatherspark.com/y/32163/Average-Weather-in-Sines-Portugal-Year-Round",
+  "safety": "US advisory Level 1 (normal precautions). Petty theft in central Lisbon; summer heat and wildfire season inland.",
+  "note": "Jul: PROXY: no Comporta page. Sines (coast) shown; Grandola (~20 km inland) 86/62F. Breezy, sea 66F. Aug: Grandola 85/63F; coastal pine forests carry fire risk. Sep: Grandola 81/61F; dry, settled. Oct: Grandola 72/57F, 7 wet days."
+ },
+ "evora": {
+  "station": "Evora (inland Alentejo)",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 90,
+    "lowF": 61,
+    "humidity": "1%",
+    "rainDays": 0,
+    "rainMm": 3
+   },
+   "08": {
+    "highF": 89,
+    "lowF": 61,
+    "humidity": "2%",
+    "rainDays": 1,
+    "rainMm": 5
+   },
+   "09": {
+    "highF": 83,
+    "lowF": 59,
+    "humidity": "2%",
+    "rainDays": 3,
+    "rainMm": 23
+   },
+   "10": {
+    "highF": 72,
+    "lowF": 54,
+    "humidity": "1%",
+    "rainDays": 7,
+    "rainMm": 61
+   }
+  },
+  "src": "https://weatherspark.com/y/32806/Average-Weather-in-%C3%89vora-Portugal-Year-Round",
+  "safety": "US advisory Level 1 (normal precautions). Petty theft in central Lisbon; summer heat and wildfire season inland.",
+  "note": "Jul: Dry heat; heat waves often 104F+ in Alentejo interior; big day-night swing. Aug: As July; State Dept lists Jul-Aug heat waves for Portugal. Sep: Warm, dry, very low humidity. Oct: Mild; rain returns."
+ },
+ "porto": {
+  "station": "Porto",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 75,
+    "lowF": 59,
+    "humidity": "4%",
+    "rainDays": 2,
+    "rainMm": 10
+   },
+   "08": {
+    "highF": 75,
+    "lowF": 59,
+    "humidity": "7%",
+    "rainDays": 2,
+    "rainMm": 15
+   },
+   "09": {
+    "highF": 73,
+    "lowF": 57,
+    "humidity": "4%",
+    "rainDays": 5,
+    "rainMm": 51
+   },
+   "10": {
+    "highF": 68,
+    "lowF": 54,
+    "humidity": "2%",
+    "rainDays": 10,
+    "rainMm": 112
+   }
+  },
+  "src": "https://weatherspark.com/y/32397/Average-Weather-in-Porto-Portugal-Year-Round",
+  "safety": "US advisory Level 1 (normal precautions). Petty theft in central Lisbon; summer heat and wildfire season inland.",
+  "note": "Jul: Coolest option; morning fog/low cloud; sea 63F (cold). Aug: Mild; occasional heat spikes when east wind blows. Sep: Rain picks up (~5 wet days, 51 mm). Oct: AVOID: wettest of all regions (~112 mm, 10.5 wet days); southerly storm season starts mid-Oct."
+ },
+ "douro": {
+  "station": "Douro Valley (Peso da Regua; Pinhao hotter)",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 85,
+    "lowF": 61,
+    "humidity": "0%",
+    "rainDays": 2,
+    "rainMm": 10
+   },
+   "08": {
+    "highF": 85,
+    "lowF": 61,
+    "humidity": "0%",
+    "rainDays": 2,
+    "rainMm": 15
+   },
+   "09": {
+    "highF": 79,
+    "lowF": 58,
+    "humidity": "0%",
+    "rainDays": 5,
+    "rainMm": 51
+   },
+   "10": {
+    "highF": 68,
+    "lowF": 52,
+    "humidity": "0%",
+    "rainDays": 10,
+    "rainMm": 112
+   }
+  },
+  "src": "https://weatherspark.com/y/32903/Average-Weather-in-Peso-da-R%C3%A9gua-Portugal-Year-Round",
+  "safety": "US advisory Level 1 (normal precautions). Petty theft in central Lisbon; summer heat and wildfire season inland.",
+  "note": "Jul: Model smooths the valley floor: river-level venues often reach 95-104F (estimate); 2026 fires in Vila Real district (~16,000 ha). Aug: Hot, dry; wildfire season; harvest begins late Aug/Sept. Sep: Harvest season (vindima); warm days, cool nights; rain rising. Oct: Wet (~112 mm, 10 wet days); cool."
+ },
+ "faro": {
+  "station": "Algarve - Faro",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 83,
+    "lowF": 67,
+    "humidity": "18%",
+    "rainDays": 0,
+    "rainMm": 0
+   },
+   "08": {
+    "highF": 83,
+    "lowF": 68,
+    "humidity": "26%",
+    "rainDays": 0,
+    "rainMm": 3
+   },
+   "09": {
+    "highF": 79,
+    "lowF": 65,
+    "humidity": "26%",
+    "rainDays": 2,
+    "rainMm": 18
+   },
+   "10": {
+    "highF": 73,
+    "lowF": 60,
+    "humidity": "13%",
+    "rainDays": 6,
+    "rainMm": 56
+   }
+  },
+  "src": "https://weatherspark.com/y/32777/Average-Weather-in-Faro-Portugal-Year-Round",
+  "safety": "US advisory Level 1 (normal precautions). Petty theft in central Lisbon; summer heat and wildfire season inland.",
+  "note": "Jul: Virtually rainless; sea 69F; levante (east wind) can bring muggy, hot days. Aug: Sea 70F; muggier than Lisbon. Sep: Calmest; sea 70F; very reliable weather. Oct: Sea 68F; rain starts (~6 wet days). Lagos (west) 3-5F cooler, breezier."
+ },
+ "lagos": {
+  "station": "Algarve - Lagos",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 78,
+    "lowF": 65,
+    "humidity": "26%",
+    "rainDays": 0,
+    "rainMm": 0
+   },
+   "08": {
+    "highF": 78,
+    "lowF": 66,
+    "humidity": "36%",
+    "rainDays": 0,
+    "rainMm": 3
+   },
+   "09": {
+    "highF": 76,
+    "lowF": 65,
+    "humidity": "30%",
+    "rainDays": 2,
+    "rainMm": 18
+   },
+   "10": {
+    "highF": 71,
+    "lowF": 61,
+    "humidity": "15%",
+    "rainDays": 6,
+    "rainMm": 58
+   }
+  },
+  "src": "https://weatherspark.com/y/32175/Average-Weather-in-Lagos-Portugal-Year-Round",
+  "safety": "US advisory Level 1 (normal precautions). Petty theft in central Lisbon; summer heat and wildfire season inland.",
+  "note": "Jul: Breezy Atlantic; sea 67F; inland Monchique hills are fire-prone. Aug: Calmer; sea 68F. Sep: Calmest month; sea 68F. Oct: Mild; rain starting."
+ },
+ "athens": {
+  "station": "Athens Riviera (Vouliagmeni)",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 89,
+    "lowF": 74,
+    "humidity": "21%",
+    "rainDays": 1,
+    "rainMm": 5
+   },
+   "08": {
+    "highF": 89,
+    "lowF": 74,
+    "humidity": "22%",
+    "rainDays": 1,
+    "rainMm": 5
+   },
+   "09": {
+    "highF": 82,
+    "lowF": 69,
+    "humidity": "15%",
+    "rainDays": 2,
+    "rainMm": 13
+   },
+   "10": {
+    "highF": 73,
+    "lowF": 61,
+    "humidity": "6%",
+    "rainDays": 5,
+    "rainMm": 38
+   }
+  },
+  "src": "https://weatherspark.com/y/89177/Average-Weather-in-Vouliagm%C3%A9ni-Greece-Year-Round",
+  "safety": "US advisory Level 1 (normal precautions). Petty theft in Athens; strikes can disrupt transport; July-August heat and wildfire season.",
+  "note": "Jul: Hot, warm nights (74F); meltemi (north wind) ~10 mph avg, gusty; Athens hit ~43C (109F) on 22 Jul 2026 with Category-5 fire alert in Attica. Aug: Peak meltemi and fire season; 2026 W. Attica megafire (~14,400 ha). Sea 78F. Sep: Heat eases; sea still warm; good month. Oct: Pleasant; first storms; sea still swimmable."
+ },
+ "nafplio": {
+  "station": "Nafplio (Peloponnese)",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 94,
+    "lowF": 73,
+    "humidity": "1%",
+    "rainDays": 2,
+    "rainMm": 10
+   },
+   "08": {
+    "highF": 93,
+    "lowF": 73,
+    "humidity": "1%",
+    "rainDays": 2,
+    "rainMm": 13
+   },
+   "09": {
+    "highF": 86,
+    "lowF": 67,
+    "humidity": "1%",
+    "rainDays": 3,
+    "rainMm": 18
+   },
+   "10": {
+    "highF": 75,
+    "lowF": 59,
+    "humidity": "0%",
+    "rainDays": 5,
+    "rainMm": 46
+   }
+  },
+  "src": "https://weatherspark.com/y/87840/Average-Weather-in-N%C3%A1fplio-Greece-Year-Round",
+  "safety": "US advisory Level 1 (normal precautions). Petty theft in Athens; strikes can disrupt transport; July-August heat and wildfire season.",
+  "note": "Jul: Hottest coastal site in set (94F); sheltered gulf, little breeze; dry heat; sea 77F. Aug: As July; Peloponnese fire season (2026 firefighter death 29 Jul). Avoid. Sep: Still hot (86F); sea 77F. Oct: Ideal temps; sea 73F; occasional storms."
+ },
+ "chania": {
+  "station": "Crete - Chania",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 90,
+    "lowF": 73,
+    "humidity": "20%",
+    "rainDays": 0,
+    "rainMm": 0
+   },
+   "08": {
+    "highF": 89,
+    "lowF": 73,
+    "humidity": "29%",
+    "rainDays": 1,
+    "rainMm": 3
+   },
+   "09": {
+    "highF": 84,
+    "lowF": 69,
+    "humidity": "19%",
+    "rainDays": 2,
+    "rainMm": 8
+   },
+   "10": {
+    "highF": 76,
+    "lowF": 63,
+    "humidity": "5%",
+    "rainDays": 6,
+    "rainMm": 38
+   }
+  },
+  "src": "https://weatherspark.com/y/90522/Average-Weather-in-Chani%C3%A1-Greece-Year-Round",
+  "safety": "US advisory Level 1 (normal precautions). Petty theft in Athens; strikes can disrupt transport; July-August heat and wildfire season.",
+  "note": "Jul: Hot; meltemi; rainless; sea >74F late Jun-early Oct. Aug: Sea 77F; 2026 Crete fires forced ~8,000 evacuations on the south coast. Sep: Hot but easing; sea warm. Oct: Comfortable; ~6 wet days; sea still ~74F early Oct."
+ },
+ "heraklion": {
+  "station": "Crete - Heraklion",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 84,
+    "lowF": 72,
+    "humidity": "36%",
+    "rainDays": 0,
+    "rainMm": 0
+   },
+   "08": {
+    "highF": 83,
+    "lowF": 72,
+    "humidity": "44%",
+    "rainDays": 0,
+    "rainMm": 3
+   },
+   "09": {
+    "highF": 80,
+    "lowF": 68,
+    "humidity": "25%",
+    "rainDays": 2,
+    "rainMm": 8
+   },
+   "10": {
+    "highF": 74,
+    "lowF": 63,
+    "humidity": "6%",
+    "rainDays": 5,
+    "rainMm": 30
+   }
+  },
+  "src": "https://weatherspark.com/y/91762/Average-Weather-in-Ir%C3%A1kleion-Greece-Year-Round",
+  "safety": "US advisory Level 1 (normal precautions). Petty theft in Athens; strikes can disrupt transport; July-August heat and wildfire season.",
+  "note": "Jul: North coast, strong meltemi (~13 mph avg) tempers heat but humid nights (72F). Aug: Muggy ~44% of days; sea 77F; windy. Sep: Good month; sea warm. Oct: Very pleasant; low rain (~30 mm)."
+ },
+ "catania": {
+  "station": "Eastern Sicily - Catania",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 88,
+    "lowF": 67,
+    "humidity": "46%",
+    "rainDays": 1,
+    "rainMm": 3
+   },
+   "08": {
+    "highF": 88,
+    "lowF": 68,
+    "humidity": "58%",
+    "rainDays": 2,
+    "rainMm": 8
+   },
+   "09": {
+    "highF": 83,
+    "lowF": 64,
+    "humidity": "39%",
+    "rainDays": 4,
+    "rainMm": 33
+   },
+   "10": {
+    "highF": 76,
+    "lowF": 58,
+    "humidity": "15%",
+    "rainDays": 7,
+    "rainMm": 48
+   }
+  },
+  "src": "https://weatherspark.com/y/78384/Average-Weather-in-Catania-Italy-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), mainly terrorism, same as Spain. Petty theft in tourist areas; frequent transport strikes.",
+  "note": "Jul: Hot, muggy, light winds; scirocco heat spikes 104F+; sea 76F. Etna ash closed Catania airport repeatedly 7-14 Aug 2026. Aug: Calmest, muggiest; sea 79F; 2026 Sicily wildfires. Sep: Thunderstorms/medicane risk rises; sea 76F. Oct: Pleasant; heavy-rain events possible."
+ },
+ "syracuse": {
+  "station": "Eastern Sicily - Syracuse",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 85,
+    "lowF": 71,
+    "humidity": "68%",
+    "rainDays": 1,
+    "rainMm": 3
+   },
+   "08": {
+    "highF": 86,
+    "lowF": 72,
+    "humidity": "83%",
+    "rainDays": 1,
+    "rainMm": 8
+   },
+   "09": {
+    "highF": 81,
+    "lowF": 68,
+    "humidity": "62%",
+    "rainDays": 4,
+    "rainMm": 33
+   },
+   "10": {
+    "highF": 75,
+    "lowF": 63,
+    "humidity": "27%",
+    "rainDays": 7,
+    "rainMm": 51
+   }
+  },
+  "src": "https://weatherspark.com/y/78340/Average-Weather-in-Siracusa-Italy-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), mainly terrorism, same as Spain. Petty theft in tourist areas; frequent transport strikes.",
+  "note": "Jul: MOST HUMID site in the set: muggy 2 of 3 days; warm nights 71F; sea 77F. Aug: Muggy ~83% of days; avoid if humidity is a dealbreaker. Sep: Still muggy 60% of days; storms possible. Oct: Comfortable; sea 72F."
+ },
+ "puglia": {
+  "station": "Puglia (Ostuni; Fasano near-identical)",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 83,
+    "lowF": 69,
+    "humidity": "45%",
+    "rainDays": 2,
+    "rainMm": 13
+   },
+   "08": {
+    "highF": 83,
+    "lowF": 68,
+    "humidity": "54%",
+    "rainDays": 4,
+    "rainMm": 20
+   },
+   "09": {
+    "highF": 77,
+    "lowF": 63,
+    "humidity": "28%",
+    "rainDays": 6,
+    "rainMm": 48
+   },
+   "10": {
+    "highF": 68,
+    "lowF": 56,
+    "humidity": "8%",
+    "rainDays": 8,
+    "rainMm": 64
+   }
+  },
+  "src": "https://weatherspark.com/y/81997/Average-Weather-in-Ostuni-Italy-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), mainly terrorism, same as Spain. Petty theft in tourist areas; frequent transport strikes.",
+  "note": "Jul: Steady north breeze (~10 mph); muggy ~45% of days; scirocco heat spikes; sea 76F. Aug: Calmest, muggiest; sea 78F; 2026 Alta Murgia fire (inland). Sep: Good; storms increase; sea 75F. Oct: Cooler (68F), ~8 wet days; sea 69F."
+ },
+ "florence": {
+  "station": "Florence",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 88,
+    "lowF": 65,
+    "humidity": "25%",
+    "rainDays": 4,
+    "rainMm": 25
+   },
+   "08": {
+    "highF": 88,
+    "lowF": 65,
+    "humidity": "26%",
+    "rainDays": 5,
+    "rainMm": 33
+   },
+   "09": {
+    "highF": 79,
+    "lowF": 59,
+    "humidity": "9%",
+    "rainDays": 7,
+    "rainMm": 61
+   },
+   "10": {
+    "highF": 69,
+    "lowF": 52,
+    "humidity": "2%",
+    "rainDays": 9,
+    "rainMm": 79
+   }
+  },
+  "src": "https://weatherspark.com/y/69010/Average-Weather-in-Florence-Italy-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), mainly terrorism, same as Spain. Petty theft in tourist areas; frequent transport strikes.",
+  "note": "Jul: Basin traps heat; station highs typically low 90sF (model 88F); afternoon thunderstorms. Aug: Hot, still air (5.6 mph); city empties mid-Aug (Ferragosto). Sep: Good temps; ~7 wet days, storms possible. Oct: Wetter (~79 mm, 9 days); cool nights."
+ },
+ "casentino": {
+  "station": "Casentino (Poppi; Bibbiena proxy)",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 83,
+    "lowF": 59,
+    "humidity": "8%",
+    "rainDays": 4,
+    "rainMm": 25
+   },
+   "08": {
+    "highF": 83,
+    "lowF": 59,
+    "humidity": "9%",
+    "rainDays": 5,
+    "rainMm": 36
+   },
+   "09": {
+    "highF": 74,
+    "lowF": 53,
+    "humidity": "2%",
+    "rainDays": 7,
+    "rainMm": 61
+   },
+   "10": {
+    "highF": 64,
+    "lowF": 46,
+    "humidity": "0%",
+    "rainDays": 9,
+    "rainMm": 74
+   }
+  },
+  "src": "https://weatherspark.com/y/69046/Average-Weather-in-Bibbiena-Italy-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), mainly terrorism, same as Spain. Petty theft in tourist areas; frequent transport strikes.",
+  "note": "Jul: PROXY Bibbiena (~5 km). Upland valley: ~5F cooler than Florence, cool nights, low humidity; afternoon storms. Aug: Good balance of heat and humidity; storms ~5 days. Sep: Mild days, chilly nights (53F); ~7 wet days. Oct: Cool (64/46F); wet; outdoor evening events chilly."
+ },
+ "valdorcia": {
+  "station": "Val d'Orcia (Chianciano)",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 84,
+    "lowF": 58,
+    "humidity": "6%",
+    "rainDays": 4,
+    "rainMm": 23
+   },
+   "08": {
+    "highF": 84,
+    "lowF": 58,
+    "humidity": "7%",
+    "rainDays": 4,
+    "rainMm": 30
+   },
+   "09": {
+    "highF": 75,
+    "lowF": 52,
+    "humidity": "2%",
+    "rainDays": 7,
+    "rainMm": 64
+   },
+   "10": {
+    "highF": 64,
+    "lowF": 46,
+    "humidity": "0%",
+    "rainDays": 8,
+    "rainMm": 74
+   }
+  },
+  "src": "https://weatherspark.com/y/69023/Average-Weather-in-Chianciano-Terme-Italy-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), mainly terrorism, same as Spain. Petty theft in tourist areas; frequent transport strikes.",
+  "note": "Jul: Hilltop: low humidity, cool nights (58F); thunderstorms ~4 days. Aug: Best low-humidity Italian option for Aug. Sep: Pleasant days, cool nights. Oct: Cool and wet-ish (~8 wet days)."
+ },
+ "como": {
+  "station": "Lake Como (Como)",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 80,
+    "lowF": 64,
+    "humidity": "18%",
+    "rainDays": 9,
+    "rainMm": 74
+   },
+   "08": {
+    "highF": 79,
+    "lowF": 63,
+    "humidity": "16%",
+    "rainDays": 9,
+    "rainMm": 79
+   },
+   "09": {
+    "highF": 72,
+    "lowF": 57,
+    "humidity": "3%",
+    "rainDays": 8,
+    "rainMm": 94
+   },
+   "10": {
+    "highF": 62,
+    "lowF": 48,
+    "humidity": "0%",
+    "rainDays": 8,
+    "rainMm": 99
+   }
+  },
+  "src": "https://weatherspark.com/y/62658/Average-Weather-in-Como-Italy-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), mainly terrorism, same as Spain. Petty theft in tourist areas; frequent transport strikes.",
+  "note": "Jul: Mild temps but WETTEST summer in set: ~9 wet days/month, Alpine thunderstorms, hail, flash floods. Aug: Same storm pattern; 2026 Monte Goj fire above Como (50 evacuated). Sep: Comfortable but ~94 mm rain; persistent rain events. Oct: Cool (62/48F) and wet (~99 mm)."
+ },
+ "garda": {
+  "station": "Lake Garda (Salo; Desenzano proxy)",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 84,
+    "lowF": 68,
+    "humidity": "31%",
+    "rainDays": 7,
+    "rainMm": 53
+   },
+   "08": {
+    "highF": 83,
+    "lowF": 66,
+    "humidity": "29%",
+    "rainDays": 7,
+    "rainMm": 58
+   },
+   "09": {
+    "highF": 75,
+    "lowF": 60,
+    "humidity": "6%",
+    "rainDays": 7,
+    "rainMm": 69
+   },
+   "10": {
+    "highF": 64,
+    "lowF": 51,
+    "humidity": "0%",
+    "rainDays": 8,
+    "rainMm": 79
+   }
+  },
+  "src": "https://weatherspark.com/y/66304/Average-Weather-in-Desenzano-del-Garda-Italy-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), mainly terrorism, same as Spain. Petty theft in tourist areas; frequent transport strikes.",
+  "note": "Jul: PROXY Desenzano (~20 km). Warm, humid nights; frequent storms (~7 wet days); Ora/Peler lake winds. Aug: Similar; calmest month. Sep: Good temps; storms continue. Oct: Cool, ~8 wet days."
+ },
+ "carmignano": {
+  "station": "Carmignano (Prato proxy)",
+  "humidityLabel": "Muggy days (% of month)",
+  "months": {
+   "07": {
+    "highF": 87,
+    "lowF": 65,
+    "humidity": "26%",
+    "rainDays": 4,
+    "rainMm": 25
+   },
+   "08": {
+    "highF": 87,
+    "lowF": 65,
+    "humidity": "27%",
+    "rainDays": 5,
+    "rainMm": 36
+   },
+   "09": {
+    "highF": 79,
+    "lowF": 60,
+    "humidity": "9%",
+    "rainDays": 7,
+    "rainMm": 61
+   },
+   "10": {
+    "highF": 69,
+    "lowF": 53,
+    "humidity": "1%",
+    "rainDays": 9,
+    "rainMm": 81
+   }
+  },
+  "src": "https://weatherspark.com/y/68959/Average-Weather-in-Prato-Italy-Year-Round",
+  "safety": "US advisory Level 2 (exercise increased caution), mainly terrorism, same as Spain. Petty theft in tourist areas; frequent transport strikes.",
+  "note": "Jul: PROXY Prato (~10 km); hillside venues slightly cooler. Hot like Florence; storms. Aug: Hot; calmest month. Sep: Good temps; storms possible. Oct: Wetter (~81 mm)."
+ }
+}
